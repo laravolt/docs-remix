@@ -1,0 +1,27 @@
+{
+  "name": "laravolt-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node --watch --import remix/node-tsx server.ts",
+    "start": "NODE_ENV=production node --import remix/node-tsx server.ts",
+    "typecheck": "tsc --noEmit",
+    "css": "tailwindcss --input app/styles/tailwind.css --output public/styles.css --minify"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "^0.4.0",
+    "js-yaml": "^4.1.0",
+    "remix": "^3.0.0-beta.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "@tailwindcss/typography": "0.5.20",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "latest",
+    "tailwindcss": "4.3.3",
+    "typescript": "latest"
+  }
+}
