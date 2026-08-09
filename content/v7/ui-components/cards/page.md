@@ -267,6 +267,6 @@ Test card rendering:
 
 ## What to read next
 
-- [Buttons](/v7/ui-components/buttons) — button placement in card footers
-- [Tables](/v7/ui-foundation/tables) — Suitable table component
-- [UI foundation](/v7/ui-foundation/overview) — Preline UI component library
+- [Buttons](/ui-components/buttons) — button placement in card footers
+- [Tables](/ui-foundation/tables) — Suitable table component
+- [UI foundation](/ui-foundation/overview) — Preline UI component library

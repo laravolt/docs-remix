@@ -10,13 +10,13 @@ It gives Laravel teams a complete, opinionated foundation for internal tools, en
 
 {% quick-links %}
 
-{% quick-link title="Start with v7" icon="installation" href="/v7/introduction" description="Learn the mental model behind Laravolt v7 and when it is the right fit for your Laravel project." /%}
+{% quick-link title="Start with v7" icon="installation" href="/introduction" description="Learn the mental model behind Laravolt v7 and when it is the right fit for your Laravel project." /%}
 
-{% quick-link title="Install Laravolt" icon="presets" href="/v7/getting-started/installation" description="Set up Laravolt v7, publish its assets, run migrations, and create the first administrator account." /%}
+{% quick-link title="Install Laravolt" icon="presets" href="/getting-started/installation" description="Set up Laravolt v7, publish its assets, run migrations, and create the first administrator account." /%}
 
-{% quick-link title="AI-ready platform" icon="plugins" href="/v7/core-concepts/ai-ready-platform" description="See how conventions, safe defaults, and predictable APIs make Laravolt projects easier for teams and coding agents to extend." /%}
+{% quick-link title="AI-ready platform" icon="plugins" href="/core-concepts/ai-ready-platform" description="See how conventions, safe defaults, and predictable APIs make Laravolt projects easier for teams and coding agents to extend." /%}
 
-{% quick-link title="Build forms" icon="theming" href="/v7/forms/overview" description="Use Laravolt forms to build consistent business interfaces with Laravel validation and Preline UI." /%}
+{% quick-link title="Build forms" icon="theming" href="/forms/overview" description="Use Laravolt forms to build consistent business interfaces with Laravel validation and Preline UI." /%}
 
 {% /quick-links %}
 

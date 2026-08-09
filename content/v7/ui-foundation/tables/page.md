@@ -135,6 +135,6 @@ A table is easier to modify safely when the columns, query, permissions, and vie
 
 ## What to read next
 
-- [Admin workflows](/v7/admin-workflows/overview) — combine lists, forms, and actions into resource workflows.
-- [Access control](/v7/security/access-control) — protect row actions and menu entries.
-- [Artisan commands](/v7/reference/artisan-commands) — command reference for `make:table`.
+- [Admin workflows](/admin-workflows/overview) — combine lists, forms, and actions into resource workflows.
+- [Access control](/security/access-control) — protect row actions and menu entries.
+- [Artisan commands](/reference/artisan-commands) — command reference for `make:table`.

@@ -49,7 +49,14 @@ export default createController(routes, {
     page(context) {
       let pathname = `/${context.params.path}`
 
-      // `.md` mirror: /v7/introduction.md serves the raw Markdoc source.
+      // v7 moved to the URL root; permanently redirect old /v7-prefixed URLs
+      // (including .md mirrors) so external links keep working.
+      if (pathname === '/v7' || pathname.startsWith('/v7/')) {
+        let target = pathname.slice('/v7'.length) || '/'
+        return new Response(null, { status: 301, headers: { Location: target } })
+      }
+
+      // `.md` mirror: /introduction.md serves the raw Markdoc source.
       let mirrorTarget = pathForMarkdownMirror(pathname)
       if (mirrorTarget !== null) {
         let source = rawPageSource(mirrorTarget)

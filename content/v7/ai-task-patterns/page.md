@@ -758,7 +758,7 @@ For each task:
 
 ## What to read next
 
-- [AI Coding Quickstart](/v7/ai-coding-quickstart) - Bootstrap workflow
-- [Thunderclap Recipes](/v7/thunderclap-recipes) - Post-generation customization
-- [AI-ready development guide](/v7/ai-ready-development/guide) - Review checklist
-- [Thunderclap](/v7/admin-workflows/thunderclap) - Generation command reference
+- [AI Coding Quickstart](/ai-coding-quickstart) - Bootstrap workflow
+- [Thunderclap Recipes](/thunderclap-recipes) - Post-generation customization
+- [AI-ready development guide](/ai-ready-development/guide) - Review checklist
+- [Thunderclap](/admin-workflows/thunderclap) - Generation command reference

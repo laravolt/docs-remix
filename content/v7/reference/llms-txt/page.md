@@ -15,7 +15,7 @@ Unlike a static-site setup, nothing is generated at build time. The Remix server
 | --- | --- |
 | `/llms.txt` | Human- and LLM-readable index. Title, short description, and a list of every page grouped by version and section. Follows the [llmstxt.org](https://llmstxt.org) convention. |
 | `/llms-full.txt` | Every page concatenated, with route headers. Useful when a model can accept large context and you want the whole docs in one shot. |
-| `/<route>.md` | Per-page markdown mirror. For example `/v7/forms/overview.md` returns the raw Markdoc source of that page. The home page is `/index.md`. |
+| `/<route>.md` | Per-page markdown mirror. For example `/forms/overview.md` returns the raw Markdoc source of that page. The home page is `/index.md`. |
 
 A representative `llms.txt` snippet:
 
@@ -26,8 +26,8 @@ A representative `llms.txt` snippet:
 
 ## Laravolt v7 — Introduction
 
-- [Introduction](/v7/introduction.md): Laravolt v7 is an AI-ready Laravel...
-- [Installation](/v7/getting-started/installation.md): Install Laravolt v7...
+- [Introduction](/introduction.md): Laravolt v7 is an AI-ready Laravel...
+- [Installation](/getting-started/installation.md): Install Laravolt v7...
 ```
 
 The `.md` mirrors are the same raw Markdoc you see in `content/.../page.md`. Markdoc tags (`{% callout %}`, `{% quick-links %}`) are kept intact — they do not hurt LLM comprehension and keep the response small.
@@ -44,7 +44,7 @@ Every docs page renders an action row below its title:
 The prompt is intentionally conservative:
 
 ```text
-Read https://<your-domain>/v7/forms/overview.md and help me understand,
+Read https://<your-domain>/forms/overview.md and help me understand,
 summarize, and answer questions about the content.
 ```
 
@@ -57,8 +57,8 @@ The mirror URL is the page URL with `.md` appended (or `/index.md` at the root):
 | Source | Route | Mirror URL |
 | --- | --- | --- |
 | `content/page.md` | `/` | `/index.md` |
-| `content/v7/introduction/page.md` | `/v7/introduction` | `/v7/introduction.md` |
-| `content/v7/forms/overview/page.md` | `/v7/forms/overview` | `/v7/forms/overview.md` |
+| `content/v7/introduction/page.md` | `/introduction` | `/introduction.md` |
+| `content/v7/forms/overview/page.md` | `/forms/overview` | `/forms/overview.md` |
 
 Because everything is served from the live route handlers, there is no generator to run and no `.gitignore` bookkeeping — editing a page updates its `.md` mirror, `llms.txt`, and `llms-full.txt` immediately.
 
@@ -89,4 +89,4 @@ If you need to customize behaviour, these are the files to edit:
 
 ## What to read next
 
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — the broader stance that `llms.txt` and Copy Markdown support.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — the broader stance that `llms.txt` and Copy Markdown support.

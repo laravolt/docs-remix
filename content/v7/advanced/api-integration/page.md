@@ -612,13 +612,13 @@ php artisan tinker
 
 ## Next Steps
 
-- [Custom Generators](/v7/advanced/custom-generators) - Extend Thunderclap for API-specific patterns
-- [Performance Optimization](/v7/reference/performance) - Optimize API response times
-- [Security Best Practices](/v7/security/access-control) - Secure your APIs
+- [Custom Generators](/advanced/custom-generators) - Extend Thunderclap for API-specific patterns
+- [Performance Optimization](/reference/performance) - Optimize API response times
+- [Security Best Practices](/security/access-control) - Secure your APIs
 
 ---
 
 **Related:**
-- [Thunderclap Overview](/v7/admin-workflows/thunderclap)
-- [Form Validation](/v7/forms/validation)
-- [Access Control](/v7/security/access-control)
+- [Thunderclap Overview](/admin-workflows/thunderclap)
+- [Form Validation](/forms/validation)
+- [Access Control](/security/access-control)

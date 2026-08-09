@@ -683,6 +683,6 @@ Focus on the 20% of optimizations that give 80% of the gains:
 ---
 
 **Next Steps:**
-- Set up Telescope: `/v7/testing/browser-testing`
-- Configure caching: `/v7/reference/configuration`
-- Deploy with Octane: `/v7/getting-started/installation`
+- Set up Telescope: `/testing/browser-testing`
+- Configure caching: `/reference/configuration`
+- Deploy with Octane: `/getting-started/installation`

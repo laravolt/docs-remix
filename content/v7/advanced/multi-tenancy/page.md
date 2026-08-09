@@ -597,6 +597,6 @@ Schema::table('products', function (Blueprint $table) {
 ---
 
 **Next Steps:**
-- [API Integration Patterns](/v7/advanced/api-integration)
-- [Custom Generators](/v7/advanced/custom-generators)
-- [Security: Access Control](/v7/security/access-control)
+- [API Integration Patterns](/advanced/api-integration)
+- [Custom Generators](/advanced/custom-generators)
+- [Security: Access Control](/security/access-control)

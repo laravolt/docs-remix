@@ -235,6 +235,6 @@ php artisan tinker
 
 ## What to read next
 
-- [Modals](/v7/ui-components/modals) — trigger modals from buttons
-- [Forms overview](/v7/forms/overview) — button integration with PrelineForm
-- [Cards](/v7/ui-components/cards) — button placement in card footers
+- [Modals](/ui-components/modals) — trigger modals from buttons
+- [Forms overview](/forms/overview) — button integration with PrelineForm
+- [Cards](/ui-components/cards) — button placement in card footers

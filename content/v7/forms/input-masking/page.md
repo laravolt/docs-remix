@@ -10,7 +10,7 @@ Laravolt v7 ships a thin adapter around [Inputmask](https://github.com/RobinHerb
 
 Input masks guide users while they type. A phone mask lets a user see the final format as they key it in; a currency mask adds grouping separators; a date mask refuses letters and keeps the shape of `yyyy-mm-dd`. This is a better UX than "submit and get an error".
 
-Masks complement — they do not replace — [server-side validation](/v7/forms/validation). The mask is polish; the `FormRequest` is the contract.
+Masks complement — they do not replace — [server-side validation](/forms/validation). The mask is polish; the `FormRequest` is the contract.
 
 ## Quick start
 
@@ -179,6 +179,6 @@ For the browser-level UX, rely on Playwright/Dusk/integration tests that submit 
 
 ## What to read next
 
-- [Validation](/v7/forms/validation) — the server-side contract that masks decorate.
-- [Forms overview](/v7/forms/overview) — the full form builder API.
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — why keeping masks declarative and testable matters when AI tools modify forms.
+- [Validation](/forms/validation) — the server-side contract that masks decorate.
+- [Forms overview](/forms/overview) — the full form builder API.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — why keeping masks declarative and testable matters when AI tools modify forms.

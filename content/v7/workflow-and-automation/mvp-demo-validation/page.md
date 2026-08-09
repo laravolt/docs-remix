@@ -102,8 +102,8 @@ Those may be future capabilities, but this MVP validates workflow-based sharing 
 
 ## What to read next
 
-- [Workflow and automation](/v7/workflow-and-automation/overview) — model approvals, task handoffs, and process state.
-- [Admin workflows](/v7/admin-workflows/overview) — structure resource screens around business operations.
-- [Access control](/v7/security/access-control) — protect resources and actions.
-- [AI-ready development guide](/v7/ai-ready-development/guide) — give coding agents explicit contracts and guardrails.
-- [Browser testing](/v7/testing/browser-testing) — verify operational workflows in a real browser.
+- [Workflow and automation](/workflow-and-automation/overview) — model approvals, task handoffs, and process state.
+- [Admin workflows](/admin-workflows/overview) — structure resource screens around business operations.
+- [Access control](/security/access-control) — protect resources and actions.
+- [AI-ready development guide](/ai-ready-development/guide) — give coding agents explicit contracts and guardrails.
+- [Browser testing](/testing/browser-testing) — verify operational workflows in a real browser.

@@ -69,4 +69,4 @@ In those cases, plain Laravel plus a focused UI stack may be simpler.
 
 ## What to read next
 
-Start with [Installation](/v7/getting-started/installation), then read [AI-ready platform](/v7/core-concepts/ai-ready-platform) before building forms or admin workflows.
+Start with [Installation](/getting-started/installation), then read [AI-ready platform](/core-concepts/ai-ready-platform) before building forms or admin workflows.

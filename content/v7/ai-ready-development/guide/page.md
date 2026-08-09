@@ -123,6 +123,6 @@ Use smaller targeted gates during development, then full gates before tagging a 
 
 ## What to read next
 
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — the product-level mental model.
-- [Forms overview](/v7/forms/overview) — predictable form APIs for humans and agents.
-- [Browser testing](/v7/testing/browser-testing) — smoke tests that catch integration drift.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — the product-level mental model.
+- [Forms overview](/forms/overview) — predictable form APIs for humans and agents.
+- [Browser testing](/testing/browser-testing) — smoke tests that catch integration drift.

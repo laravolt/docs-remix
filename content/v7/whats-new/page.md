@@ -15,11 +15,11 @@ Laravolt 7 is the biggest release in the platform's history: a complete UI overh
 
 {% quick-links %}
 
-{% quick-link title="Preline UI + Tailwind CSS" icon="theming" href="/v7/ui-components" description="Every component rewritten on Preline UI v3 with dark mode support out of the box." /%}
+{% quick-link title="Preline UI + Tailwind CSS" icon="theming" href="/ui-components" description="Every component rewritten on Preline UI v3 with dark mode support out of the box." /%}
 
-{% quick-link title="Smarter Thunderclap" icon="plugins" href="/v7/thunderclap" description="Generated modules ship with FormRequest validation and a unified permission gate." /%}
+{% quick-link title="Smarter Thunderclap" icon="plugins" href="/thunderclap" description="Generated modules ship with FormRequest validation and a unified permission gate." /%}
 
-{% quick-link title="Installation" icon="installation" href="/v7/installation" description="Start a fresh project with the Laravel starter kit." /%}
+{% quick-link title="Installation" icon="installation" href="/installation" description="Start a fresh project with the Laravel starter kit." /%}
 
 {% /quick-links %}
 

@@ -153,6 +153,6 @@ These conventions help human reviewers and AI coding agents make smaller, more p
 
 ## What to read next
 
-- [Forms overview](/v7/forms/overview) — build consistent forms with Preline UI and Laravel validation.
-- [Admin workflows](/v7/admin-workflows/overview) — structure CRUD-heavy business screens.
-- [Access control](/v7/security/access-control) — protect pages, menus, and actions with roles and permissions.
+- [Forms overview](/forms/overview) — build consistent forms with Preline UI and Laravel validation.
+- [Admin workflows](/admin-workflows/overview) — structure CRUD-heavy business screens.
+- [Access control](/security/access-control) — protect pages, menus, and actions with roles and permissions.

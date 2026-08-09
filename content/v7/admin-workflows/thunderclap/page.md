@@ -182,8 +182,8 @@ Thunderclap is most useful when it removes repetitive typing without hiding resp
 
 ## What to read next
 
-- [Admin workflows](/v7/admin-workflows/overview) — structure generated resources into business operations.
-- [Forms overview](/v7/forms/overview) — refine generated create and edit screens.
-- [Tables and listings](/v7/ui-foundation/tables) — tune generated listings.
-- [Access control](/v7/security/access-control) — protect generated routes and actions.
-- [Artisan commands](/v7/reference/artisan-commands) — command reference for Laravolt packages.
+- [Admin workflows](/admin-workflows/overview) — structure generated resources into business operations.
+- [Forms overview](/forms/overview) — refine generated create and edit screens.
+- [Tables and listings](/ui-foundation/tables) — tune generated listings.
+- [Access control](/security/access-control) — protect generated routes and actions.
+- [Artisan commands](/reference/artisan-commands) — command reference for Laravolt packages.

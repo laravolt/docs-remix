@@ -334,6 +334,6 @@ php artisan make:controller TestFormController
 
 ## What to read next
 
-- [Form layouts](/v7/forms/layouts) — organize custom fields in responsive layouts
-- [Validation](/v7/forms/validation) — client-side and server-side validation patterns
-- [UI foundation](/v7/ui-foundation/overview) — Preline UI component library
+- [Form layouts](/forms/layouts) — organize custom fields in responsive layouts
+- [Validation](/forms/validation) — client-side and server-side validation patterns
+- [UI foundation](/ui-foundation/overview) — Preline UI component library

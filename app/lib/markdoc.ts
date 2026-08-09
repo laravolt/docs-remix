@@ -29,6 +29,13 @@ export function contentFileForPath(pathname: string): string | null {
   let clean = pathname.replace(/\/+$/, '')
   if (clean.includes('..')) return null
 
+  // v7 is the current version and lives at the URL root (`/introduction` →
+  // `content/v7/introduction`). Only legacy versions keep a URL prefix
+  // (`/v6/...` → `content/v6/...`). The homepage stays at `content/page.md`.
+  if (clean !== '' && !clean.startsWith('/v6')) {
+    clean = `/v7${clean}`
+  }
+
   let file = path.join(contentDir, clean, 'page.md')
   if (!file.startsWith(contentDir)) return null
 

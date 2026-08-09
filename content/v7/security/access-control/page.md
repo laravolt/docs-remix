@@ -178,5 +178,5 @@ This keeps generated code aligned with the platform security model.
 
 ## What to read next
 
-- [Admin workflows](/v7/admin-workflows/overview) — structure screens and actions around resources.
-- [Browser testing](/v7/testing/browser-testing) — verify that protected workflows behave correctly in a browser.
+- [Admin workflows](/admin-workflows/overview) — structure screens and actions around resources.
+- [Browser testing](/testing/browser-testing) — verify that protected workflows behave correctly in a browser.

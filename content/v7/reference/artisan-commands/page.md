@@ -84,7 +84,7 @@ php artisan laravolt:models {--table=}
 
 Use `make:table` for Suitable/Livewire table classes and `make:view` for Blade views. `make:chart` and `make:statistic` generate Livewire components for dashboard surfaces.
 
-Use `laravolt:models` to inspect model candidates in `app/Models`. Use `laravolt:clap` to generate schema-driven module scaffolding from a database table. See [Thunderclap](/v7/admin-workflows/thunderclap) for the full workflow and review checklist.
+Use `laravolt:models` to inspect model candidates in `app/Models`. Use `laravolt:clap` to generate schema-driven module scaffolding from a database table. See [Thunderclap](/admin-workflows/thunderclap) for the full workflow and review checklist.
 
 ## Workflow
 
@@ -114,6 +114,6 @@ This command installs and configures Pest 4. It is called by `laravolt:install`,
 
 ## What to read next
 
-- [Installation](/v7/getting-started/installation) — where setup commands fit into first install.
-- [Workflow and automation](/v7/workflow-and-automation/overview) — operational workflow commands.
-- [Package list](/v7/reference/package-list) — packages behind the commands.
+- [Installation](/getting-started/installation) — where setup commands fit into first install.
+- [Workflow and automation](/workflow-and-automation/overview) — operational workflow commands.
+- [Package list](/reference/package-list) — packages behind the commands.

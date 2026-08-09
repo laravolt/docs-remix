@@ -50,12 +50,12 @@ curl https://docs.laravolt.dev/llms-full.txt | pbcopy
 
 Feed the agent only the pages relevant to the task:
 
-- **Scaffolding a new module:** `/v7/admin-workflows/thunderclap.md` + `/v7/ai-coding-quickstart.md`
-- **Adding a business action:** `/v7/admin-workflows/business-actions.md`
-- **Form work:** `/v7/forms/overview.md` + `/v7/forms/validation.md`
-- **Table/listing work:** `/v7/ui-foundation/tables.md`
-- **Permissions:** `/v7/security/access-control.md`
-- **Testing:** `/v7/testing/browser-testing.md`
+- **Scaffolding a new module:** `/admin-workflows/thunderclap.md` + `/ai-coding-quickstart.md`
+- **Adding a business action:** `/admin-workflows/business-actions.md`
+- **Form work:** `/forms/overview.md` + `/forms/validation.md`
+- **Table/listing work:** `/ui-foundation/tables.md`
+- **Permissions:** `/security/access-control.md`
+- **Testing:** `/testing/browser-testing.md`
 
 ### Option 3: llms.txt index
 
@@ -74,7 +74,7 @@ curl https://docs.laravolt.dev/llms.txt
 
 ## Related pages
 
-- [AI-ready development guide](/v7/ai-ready-development/guide) — design principles
-- [AI Coding Quickstart](/v7/ai-coding-quickstart) — step-by-step first module
-- [AI Task Patterns](/v7/ai-task-patterns) — copy-paste prompt templates
-- [Task Recipes](/v7/task-recipes) — post-generation customization recipes
+- [AI-ready development guide](/ai-ready-development/guide) — design principles
+- [AI Coding Quickstart](/ai-coding-quickstart) — step-by-step first module
+- [AI Task Patterns](/ai-task-patterns) — copy-paste prompt templates
+- [Task Recipes](/task-recipes) — post-generation customization recipes

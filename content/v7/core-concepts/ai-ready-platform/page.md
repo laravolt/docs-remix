@@ -41,7 +41,7 @@ A new developer — or a coding agent — should be able to answer these questio
 | Question | Where to look |
 | --- | --- |
 | Where is a form defined? | Blade view using `PrelineForm::...`, validated by an `app/Http/Requests/*` class |
-| Where does a generated admin module start? | [Thunderclap](/v7/admin-workflows/thunderclap) scaffolding from the table schema, then review the generated module files |
+| Where does a generated admin module start? | [Thunderclap](/admin-workflows/thunderclap) scaffolding from the table schema, then review the generated module files |
 | Where is a list/table defined? | Suitable builder/table class, often generated with `php artisan make:table` |
 | Where are permissions checked? | Laravel policies, `@can` directives, or Laravolt ACL helpers |
 | Where does a menu item live? | `app('laravolt.menu.builder')->register(...)` or `config/laravolt/menu/*` |
@@ -113,12 +113,12 @@ Documentation, policies, tests, and conventions are the guardrails. AI is the ac
 The current codebase exposes practical extension points for the most common generated work:
 
 - menu registration through `app('laravolt.menu.builder')->register(...)` and config arrays under `config/laravolt/menu/*`
-- [Thunderclap](/v7/admin-workflows/thunderclap) as the default scaffolding path for resource-backed admin modules
+- [Thunderclap](/admin-workflows/thunderclap) as the default scaffolding path for resource-backed admin modules
 - table/list rendering through Suitable builders and generated table classes
 - workflow state transitions through `WorkflowService::start()` and `WorkflowService::submitTask()`
-- AI assistant recipes in [AI-ready development guide](/v7/ai-ready-development/guide)
+- AI assistant recipes in [AI-ready development guide](/ai-ready-development/guide)
 
 ## What to read next
 
-- [Forms overview](/v7/forms/overview) — the first concrete example of Laravolt's convention-first APIs.
-- [Installation](/v7/getting-started/installation) — set up a project that follows these conventions from day one.
+- [Forms overview](/forms/overview) — the first concrete example of Laravolt's convention-first APIs.
+- [Installation](/getting-started/installation) — set up a project that follows these conventions from day one.

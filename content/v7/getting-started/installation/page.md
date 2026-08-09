@@ -59,7 +59,7 @@ Create an administrator account after the platform tables exist:
 php artisan laravolt:admin
 ```
 
-The command asks for name, email, and password when they are not provided. It also supports positional arguments for scripted provisioning; see [Artisan commands](/v7/reference/artisan-commands) and verify command help before using optional flags in CI.
+The command asks for name, email, and password when they are not provided. It also supports positional arguments for scripted provisioning; see [Artisan commands](/reference/artisan-commands) and verify command help before using optional flags in CI.
 
 ## Build frontend assets
 
@@ -124,9 +124,9 @@ After installation:
 php artisan test
 ```
 
-If a step fails, check [Artisan commands](/v7/reference/artisan-commands) for command details.
+If a step fails, check [Artisan commands](/reference/artisan-commands) for command details.
 
 ## What to read next
 
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — the mental model for structuring v7 projects so teams and coding agents can extend them safely.
-- [Forms overview](/v7/forms/overview) — how `PrelineForm` turns Laravel validation and Preline UI into a single form API.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — the mental model for structuring v7 projects so teams and coding agents can extend them safely.
+- [Forms overview](/forms/overview) — how `PrelineForm` turns Laravel validation and Preline UI into a single form API.

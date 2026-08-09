@@ -113,6 +113,6 @@ Require agents to add tests around transitions, permissions, and event listeners
 
 ## What to read next
 
-- [Admin workflows](/v7/admin-workflows/overview) — structure resource screens around business operations.
-- [Access control](/v7/security/access-control) — protect task submissions and workflow actions.
-- [Artisan commands](/v7/reference/artisan-commands) — operational commands shipped by Laravolt.
+- [Admin workflows](/admin-workflows/overview) — structure resource screens around business operations.
+- [Access control](/security/access-control) — protect task submissions and workflow actions.
+- [Artisan commands](/reference/artisan-commands) — operational commands shipped by Laravolt.

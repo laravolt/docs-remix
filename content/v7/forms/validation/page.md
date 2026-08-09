@@ -234,6 +234,6 @@ Because Laravolt drives client-side validation from the same rules, passing thes
 
 ## What to read next
 
-- [Input masking](/v7/forms/input-masking) — add Inputmask-compatible masks on top of validation rules.
-- [Forms overview](/v7/forms/overview) — builder basics and model binding.
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — why deriving client-side behaviour from a server-side contract matters when AI agents contribute code.
+- [Input masking](/forms/input-masking) — add Inputmask-compatible masks on top of validation rules.
+- [Forms overview](/forms/overview) — builder basics and model binding.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — why deriving client-side behaviour from a server-side contract matters when AI agents contribute code.

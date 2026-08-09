@@ -109,7 +109,7 @@ PrelineForm::text('username')
     ->data('role', 'username-field');
 ```
 
-See [Validation](/v7/forms/validation) and [Input masking](/v7/forms/input-masking) for server-driven client-side validation and Inputmask integration.
+See [Validation](/forms/validation) and [Input masking](/forms/input-masking) for server-driven client-side validation and Inputmask integration.
 
 ### 3. Actions and closing the form
 
@@ -215,6 +215,6 @@ Macros are the recommended way to extend the builder: they keep the fluent API c
 
 ## What to read next
 
-- [Validation](/v7/forms/validation) — share a Laravel `FormRequest` with the browser for client-side and server-side validation.
-- [Input masking](/v7/forms/input-masking) — phone, currency, date, and custom masks via Inputmask.
-- [AI-ready platform](/v7/core-concepts/ai-ready-platform) — why these conventions matter when coding agents collaborate on your project.
+- [Validation](/forms/validation) — share a Laravel `FormRequest` with the browser for client-side and server-side validation.
+- [Input masking](/forms/input-masking) — phone, currency, date, and custom masks via Inputmask.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — why these conventions matter when coding agents collaborate on your project.

@@ -164,7 +164,7 @@ export function Hero(handle: Handle<{}>) {
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <a
-                  href="/v7/getting-started/installation"
+                  href="/getting-started/installation"
                   className="rounded-full bg-brand-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-brand-200 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300/50 active:bg-brand-400"
                 >
                   Get started

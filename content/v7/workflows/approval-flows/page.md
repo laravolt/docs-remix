@@ -422,6 +422,6 @@ public function approve(User $approver)
 
 ## What to read next
 
-- [Notifications](/v7/workflows/notifications) — send approval notifications
-- [Thunderclap](/v7/admin-workflows/thunderclap) — generate approval flow scaffolding
-- [Access control](/v7/security/access-control) — role-based approval authorization
+- [Notifications](/workflows/notifications) — send approval notifications
+- [Thunderclap](/admin-workflows/thunderclap) — generate approval flow scaffolding
+- [Access control](/security/access-control) — role-based approval authorization

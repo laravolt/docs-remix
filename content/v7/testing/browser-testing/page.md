@@ -159,6 +159,6 @@ Reduce the test scope. Browser tests should verify a small contract, not every d
 
 ## What to read next
 
-- [Forms validation](/v7/forms/validation) — server and client validation conventions.
-- [Input masking](/v7/forms/input-masking) — browser-visible field behaviour worth testing.
-- [Access control](/v7/security/access-control) — combine policy tests with browser smoke tests for protected UI.
+- [Forms validation](/forms/validation) — server and client validation conventions.
+- [Input masking](/forms/input-masking) — browser-visible field behaviour worth testing.
+- [Access control](/security/access-control) — combine policy tests with browser smoke tests for protected UI.

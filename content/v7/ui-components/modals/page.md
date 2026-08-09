@@ -385,6 +385,6 @@ Test modals:
 
 ## What to read next
 
-- [Buttons](/v7/ui-components/buttons) — trigger modals from buttons
-- [Forms overview](/v7/forms/overview) — forms inside modals
-- [Livewire integration](/v7/ui-foundation/overview) — dynamic modal content
+- [Buttons](/ui-components/buttons) — trigger modals from buttons
+- [Forms overview](/forms/overview) — forms inside modals
+- [Livewire integration](/ui-foundation/overview) — dynamic modal content

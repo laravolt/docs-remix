@@ -6,7 +6,7 @@ title: Task Recipes
 
 Copy-paste recipes for common post-generation tasks. Each recipe shows what to change, where to change it, and how to verify. {% .lead %}
 
-These recipes are the canonical patterns coding agents should follow when extending a Thunderclap-generated module. They sit on top of [Thunderclap Recipes](/v7/thunderclap-recipes) and [AI Task Patterns](/v7/ai-task-patterns).
+These recipes are the canonical patterns coding agents should follow when extending a Thunderclap-generated module. They sit on top of [Thunderclap Recipes](/thunderclap-recipes) and [AI Task Patterns](/ai-task-patterns).
 
 ## Recipe: Add a business action to a generated module
 
@@ -22,7 +22,7 @@ Goal: add an `approve` action to a generated `PurchaseOrder` module.
 7. Add feature test for the route + policy combination
 ```
 
-See [Business actions](/v7/admin-workflows/business-actions) for the full pattern.
+See [Business actions](/admin-workflows/business-actions) for the full pattern.
 
 Verify:
 
@@ -65,7 +65,7 @@ Goal: replace the default `text` field for `price` with a masked currency input.
      'price' => ['required', 'numeric', 'min:0']
 ```
 
-See [Forms overview](/v7/forms/overview) and [Input masking](/v7/forms/input-masking).
+See [Forms overview](/forms/overview) and [Input masking](/forms/input-masking).
 
 ## Recipe: Add a search filter to a generated index
 
@@ -167,7 +167,7 @@ Always review the diff visually before committing — the snapshot is a hash of 
 
 ## Related pages
 
-- [AI Context](/v7/ai-context) — canonical agent context entry point
-- [AI Task Patterns](/v7/ai-task-patterns) — prompt templates
-- [Thunderclap Recipes](/v7/thunderclap-recipes) — generator-specific patterns
-- [Business actions](/v7/admin-workflows/business-actions) — non-CRUD operation convention
+- [AI Context](/ai-context) — canonical agent context entry point
+- [AI Task Patterns](/ai-task-patterns) — prompt templates
+- [Thunderclap Recipes](/thunderclap-recipes) — generator-specific patterns
+- [Business actions](/admin-workflows/business-actions) — non-CRUD operation convention

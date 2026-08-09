@@ -576,7 +576,7 @@ Return: migration, model, table, form, validation changes
 
 ## What to read next
 
-- [Thunderclap](/v7/admin-workflows/thunderclap) — core scaffolding concepts
-- [Forms overview](/v7/forms/overview) — PrelineForm API reference
-- [Tables and listings](/v7/ui-foundation/tables) — Suitable API reference
-- [AI task patterns](/v7/ai-task-patterns) — prompt templates for common tasks
+- [Thunderclap](/admin-workflows/thunderclap) — core scaffolding concepts
+- [Forms overview](/forms/overview) — PrelineForm API reference
+- [Tables and listings](/ui-foundation/tables) — Suitable API reference
+- [AI task patterns](/ai-task-patterns) — prompt templates for common tasks

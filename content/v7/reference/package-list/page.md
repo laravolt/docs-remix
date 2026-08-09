@@ -30,7 +30,7 @@ The main `laravolt/laravolt` package wires the service providers, facades, comma
 | `Laravolt\FileManager` | file management UI |
 | `Laravolt\DatabaseMonitor` | database monitoring surfaces |
 | `Laravolt\Mailkeeper` | queued mail sending utilities |
-| `Laravolt\Thunderclap` | [fundamental schema-driven CRUD/module scaffolding](/v7/admin-workflows/thunderclap) from database tables |
+| `Laravolt\Thunderclap` | [fundamental schema-driven CRUD/module scaffolding](/admin-workflows/thunderclap) from database tables |
 | `Laravolt\Pint` | code style helpers |
 | `Laravolt\SemanticForm` | legacy-compatible form surface kept during migration |
 
@@ -67,6 +67,6 @@ In normal applications you should not need to manually register those providers.
 
 ## What to read next
 
-- [Forms overview](/v7/forms/overview) — build with PrelineForm.
-- [Admin workflows](/v7/admin-workflows/overview) — combine forms, tables, actions, and permissions.
-- [Artisan commands](/v7/reference/artisan-commands) — commands exposed by these packages.
+- [Forms overview](/forms/overview) — build with PrelineForm.
+- [Admin workflows](/admin-workflows/overview) — combine forms, tables, actions, and permissions.
+- [Artisan commands](/reference/artisan-commands) — commands exposed by these packages.

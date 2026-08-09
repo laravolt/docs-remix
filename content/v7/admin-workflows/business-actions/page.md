@@ -227,7 +227,7 @@ Thunderclap generates a CRUD controller, routes, requests, model, table view, an
 
 1. **Add the action class** under `app/Actions/{Domain}/` — not inside the module folder.
 2. **Open the generated `modules/{Module}/routes/web.php`** and append the action route(s). The generator only seeds the file once; subsequent runs do not touch it unless `--force` is used, in which case you can re-apply from a small `routes/{module}-actions.php` partial included from `web.php`.
-3. **Add a policy method** on the resource policy. Permissions live in the seeded permission list; see [Demo seeders](/v7/getting-started/installation) for the convention.
+3. **Add a policy method** on the resource policy. Permissions live in the seeded permission list; see [Demo seeders](/getting-started/installation) for the convention.
 4. **Add the controller method** in `modules/{Module}/Controllers/{Module}Controller.php`. If you intend to re-run the generator, move custom methods to a trait under `app/Concerns/` and `use` it from the generated controller.
 5. **Add the action FormRequest** (if it takes input) under `modules/{Module}/Requests/` or `app/Http/Requests/{Module}/`.
 6. **Add the Blade trigger** to the relevant generated view (`show.blade.php` is usually the right place).
@@ -248,7 +248,7 @@ Until then, **action classes + model status + policy** is the recommended v7 sta
 
 ## What to read next
 
-- [Admin workflows overview](/v7/admin-workflows/overview) — the loop that actions plug into.
-- [Thunderclap](/v7/admin-workflows/thunderclap) — generate the CRUD baseline before adding actions.
-- [Access control](/v7/security/access-control) — permissions and policy methods.
-- [Workflow & automation overview](/v7/workflow-and-automation/overview) — the engine-backed path for complex processes.
+- [Admin workflows overview](/admin-workflows/overview) — the loop that actions plug into.
+- [Thunderclap](/admin-workflows/thunderclap) — generate the CRUD baseline before adding actions.
+- [Access control](/security/access-control) — permissions and policy methods.
+- [Workflow & automation overview](/workflow-and-automation/overview) — the engine-backed path for complex processes.

@@ -74,7 +74,7 @@ A list page should answer three questions quickly:
 </x-volt-app>
 ```
 
-Use table components for search, filtering, sorting, pagination, and row actions. Keep database query decisions inside the table class so the Blade view remains readable. See [Tables and listings](/v7/ui-foundation/tables) for the current table patterns and command reference.
+Use table components for search, filtering, sorting, pagination, and row actions. Keep database query decisions inside the table class so the Blade view remains readable. See [Tables and listings](/ui-foundation/tables) for the current table patterns and command reference.
 
 ## Create and edit screens
 
@@ -151,7 +151,7 @@ Use Laravel events, model observers, activity logs, or workflow state transition
 
 ## Thunderclap scaffolding
 
-When a database table already exists, use [Thunderclap](/v7/admin-workflows/thunderclap) as the default v7 path for generating the first version of a Laravolt admin module. It can scaffold the model, controller, form requests, views, routes, table view, service provider, and tests from the table schema.
+When a database table already exists, use [Thunderclap](/admin-workflows/thunderclap) as the default v7 path for generating the first version of a Laravolt admin module. It can scaffold the model, controller, form requests, views, routes, table view, service provider, and tests from the table schema.
 
 Use the generated module as a starting point, then review authorization, validation, menu entries, labels, relationships, and business-specific actions before shipping it.
 
@@ -177,7 +177,7 @@ Use PrelineForm for forms. Use Suitable for the listing. Do not invent package A
 
 ## What to read next
 
-- [Forms overview](/v7/forms/overview) — form conventions for create/edit screens.
-- [Business actions](/v7/admin-workflows/business-actions) — the v7 convention for non-CRUD operations on top of generated modules.
-- [Access control](/v7/security/access-control) — protect resources and actions.
-- [Browser testing](/v7/testing/browser-testing) — verify admin workflows in a real browser.
+- [Forms overview](/forms/overview) — form conventions for create/edit screens.
+- [Business actions](/admin-workflows/business-actions) — the v7 convention for non-CRUD operations on top of generated modules.
+- [Access control](/security/access-control) — protect resources and actions.
+- [Browser testing](/testing/browser-testing) — verify admin workflows in a real browser.

@@ -285,8 +285,8 @@ php artisan optimize:clear
 
 ## What to read next
 
-- [Thunderclap recipes](/v7/thunderclap-recipes) — post-generation customization patterns
-- [AI task patterns](/v7/ai-task-patterns) — prompt templates for common tasks
-- [Forms overview](/v7/forms/overview) — PrelineForm API reference
-- [Tables and listings](/v7/ui-foundation/tables) — Suitable API reference
-- [AI-ready development guide](/v7/ai-ready-development/guide) — broader AI coding principles
+- [Thunderclap recipes](/thunderclap-recipes) — post-generation customization patterns
+- [AI task patterns](/ai-task-patterns) — prompt templates for common tasks
+- [Forms overview](/forms/overview) — PrelineForm API reference
+- [Tables and listings](/ui-foundation/tables) — Suitable API reference
+- [AI-ready development guide](/ai-ready-development/guide) — broader AI coding principles

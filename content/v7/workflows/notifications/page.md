@@ -471,6 +471,6 @@ public function toDatabase($notifiable): array
 
 ## What to read next
 
-- [Approval flows](/v7/workflows/approval-flows) — state machines and approval patterns
-- [Workflow overview](/v7/workflow-and-automation/overview) — workflow automation basics
-- [Thunderclap](/v7/admin-workflows/thunderclap) — rapid CRUD with workflow integration
+- [Approval flows](/workflows/approval-flows) — state machines and approval patterns
+- [Workflow overview](/workflow-and-automation/overview) — workflow automation basics
+- [Thunderclap](/admin-workflows/thunderclap) — rapid CRUD with workflow integration

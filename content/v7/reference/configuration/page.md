@@ -710,7 +710,7 @@ php artisan laravolt:validate-config
 
 ## Next Steps
 
-- **Troubleshooting:** [Common Issues](/v7/troubleshooting/common-issues)
-- **Performance:** [Performance Optimization](/v7/reference/performance)
-- **Advanced:** [Multi-Tenancy](/v7/advanced/multi-tenancy)
-- **API:** [API Integration](/v7/advanced/api-integration)
+- **Troubleshooting:** [Common Issues](/troubleshooting/common-issues)
+- **Performance:** [Performance Optimization](/reference/performance)
+- **Advanced:** [Multi-Tenancy](/advanced/multi-tenancy)
+- **API:** [API Integration](/advanced/api-integration)

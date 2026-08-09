@@ -18,13 +18,13 @@ export const v7Navigation: NavSection[] = [
     title: 'Introduction',
     links: [
       { title: 'Home', href: '/' },
-      { title: 'Introduction', href: '/v7/introduction' },
+      { title: 'Introduction', href: '/introduction' },
     ],
   },
   {
     title: 'Getting started',
     links: [
-      { title: 'Installation', href: '/v7/getting-started/installation' },
+      { title: 'Installation', href: '/getting-started/installation' },
     ],
   },
   {
@@ -32,49 +32,49 @@ export const v7Navigation: NavSection[] = [
     links: [
       {
         title: 'AI-ready platform',
-        href: '/v7/core-concepts/ai-ready-platform',
+        href: '/core-concepts/ai-ready-platform',
       },
-      { title: 'Configuration', href: '/v7/core-concepts/configuration' },
+      { title: 'Configuration', href: '/core-concepts/configuration' },
     ],
   },
   {
     title: 'UI foundation',
     links: [
-      { title: 'Overview', href: '/v7/ui-foundation/overview' },
-      { title: 'Tables and listings', href: '/v7/ui-foundation/tables' },
+      { title: 'Overview', href: '/ui-foundation/overview' },
+      { title: 'Tables and listings', href: '/ui-foundation/tables' },
     ],
   },
   {
     title: 'Forms',
     links: [
-      { title: 'Overview', href: '/v7/forms/overview' },
-      { title: 'Validation', href: '/v7/forms/validation' },
-      { title: 'Input masking', href: '/v7/forms/input-masking' },
-      { title: 'Custom fields', href: '/v7/forms/custom-fields' },
-      { title: 'Layouts', href: '/v7/forms/layouts' },
+      { title: 'Overview', href: '/forms/overview' },
+      { title: 'Validation', href: '/forms/validation' },
+      { title: 'Input masking', href: '/forms/input-masking' },
+      { title: 'Custom fields', href: '/forms/custom-fields' },
+      { title: 'Layouts', href: '/forms/layouts' },
     ],
   },
   {
     title: 'UI components',
     links: [
-      { title: 'Buttons', href: '/v7/ui-components/buttons' },
-      { title: 'Cards', href: '/v7/ui-components/cards' },
-      { title: 'Modals', href: '/v7/ui-components/modals' },
+      { title: 'Buttons', href: '/ui-components/buttons' },
+      { title: 'Cards', href: '/ui-components/cards' },
+      { title: 'Modals', href: '/ui-components/modals' },
     ],
   },
   {
     title: 'Admin workflows',
     links: [
-      { title: 'Overview', href: '/v7/admin-workflows/overview' },
-      { title: 'Thunderclap', href: '/v7/admin-workflows/thunderclap' },
-      { title: 'Business actions', href: '/v7/admin-workflows/business-actions' },
+      { title: 'Overview', href: '/admin-workflows/overview' },
+      { title: 'Thunderclap', href: '/admin-workflows/thunderclap' },
+      { title: 'Business actions', href: '/admin-workflows/business-actions' },
     ],
   },
   {
     title: 'Workflows',
     links: [
-      { title: 'Approval flows', href: '/v7/workflows/approval-flows' },
-      { title: 'Notifications', href: '/v7/workflows/notifications' },
+      { title: 'Approval flows', href: '/workflows/approval-flows' },
+      { title: 'Notifications', href: '/workflows/notifications' },
     ],
   },
   {
@@ -82,59 +82,59 @@ export const v7Navigation: NavSection[] = [
     links: [
       {
         title: 'Overview',
-        href: '/v7/workflow-and-automation/overview',
+        href: '/workflow-and-automation/overview',
       },
       {
         title: 'MVP demo validation',
-        href: '/v7/workflow-and-automation/mvp-demo-validation',
+        href: '/workflow-and-automation/mvp-demo-validation',
       },
     ],
   },
   {
     title: 'AI-ready development',
     links: [
-      { title: 'Guide', href: '/v7/ai-ready-development/guide' },
-      { title: 'AI Context', href: '/v7/ai-context' },
-      { title: 'AI Coding Quickstart', href: '/v7/ai-coding-quickstart' },
-      { title: 'Thunderclap Recipes', href: '/v7/thunderclap-recipes' },
-      { title: 'Task Recipes', href: '/v7/task-recipes' },
-      { title: 'AI Task Patterns', href: '/v7/ai-task-patterns' },
+      { title: 'Guide', href: '/ai-ready-development/guide' },
+      { title: 'AI Context', href: '/ai-context' },
+      { title: 'AI Coding Quickstart', href: '/ai-coding-quickstart' },
+      { title: 'Thunderclap Recipes', href: '/thunderclap-recipes' },
+      { title: 'Task Recipes', href: '/task-recipes' },
+      { title: 'AI Task Patterns', href: '/ai-task-patterns' },
     ],
   },
   {
     title: 'Security',
     links: [
-      { title: 'Access control', href: '/v7/security/access-control' },
+      { title: 'Access control', href: '/security/access-control' },
     ],
   },
   {
     title: 'Testing',
     links: [
-      { title: 'Browser testing', href: '/v7/testing/browser-testing' },
+      { title: 'Browser testing', href: '/testing/browser-testing' },
     ],
   },
   {
     title: 'Troubleshooting',
     links: [
-      { title: 'Common issues', href: '/v7/troubleshooting/common-issues' },
+      { title: 'Common issues', href: '/troubleshooting/common-issues' },
     ],
   },
   {
     title: 'Advanced patterns',
     links: [
-      { title: 'Multi-tenancy', href: '/v7/advanced/multi-tenancy' },
-      { title: 'API integration', href: '/v7/advanced/api-integration' },
-      { title: 'Custom generators', href: '/v7/advanced/custom-generators' },
+      { title: 'Multi-tenancy', href: '/advanced/multi-tenancy' },
+      { title: 'API integration', href: '/advanced/api-integration' },
+      { title: 'Custom generators', href: '/advanced/custom-generators' },
     ],
   },
   {
     title: 'Reference',
     links: [
-      { title: 'llms.txt & Copy Markdown', href: '/v7/reference/llms-txt' },
-      { title: 'Artisan commands', href: '/v7/reference/artisan-commands' },
-      { title: 'Package list', href: '/v7/reference/package-list' },
-      { title: 'Configuration', href: '/v7/reference/configuration' },
-      { title: 'Performance', href: '/v7/reference/performance' },
+      { title: 'llms.txt & Copy Markdown', href: '/reference/llms-txt' },
+      { title: 'Artisan commands', href: '/reference/artisan-commands' },
+      { title: 'Package list', href: '/reference/package-list' },
+      { title: 'Configuration', href: '/reference/configuration' },
+      { title: 'Performance', href: '/reference/performance' },
     ],
   },
 ]
@@ -209,7 +209,7 @@ export const versions: Version[] = [
     label: 'v7',
     description: 'Current',
     homeHref: '/',
-    pathPrefix: '/v7',
+    pathPrefix: '',
     navigation: v7Navigation,
   },
   {
