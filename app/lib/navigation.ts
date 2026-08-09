@@ -128,10 +128,6 @@ export const v7Navigation: NavSection[] = [
     ],
   },
   {
-    title: 'Upgrade',
-    links: [{ title: 'Upgrade guide', href: '/v7/upgrade-guide' }],
-  },
-  {
     title: 'Reference',
     links: [
       { title: 'llms.txt & Copy Markdown', href: '/v7/reference/llms-txt' },

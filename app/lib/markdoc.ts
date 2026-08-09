@@ -124,9 +124,36 @@ export function renderPageFile(file: string): RenderedPage {
     }
   }
 
+  // DocsHeader renders the frontmatter title as the page <h1>, so drop the
+  // first level-1 heading from the content to avoid a duplicate h1.
+  let firstH1 = ast.children.findIndex(
+    (node) => node.type === 'heading' && node.attributes.level === 1,
+  )
+  if (firstH1 !== -1) {
+    ast.children.splice(firstH1, 1)
+  }
+
   let tableOfContents = collectSections(ast.children)
 
   let content = Markdoc.transform(ast, buildConfig(slugifyWithCounter()))
 
   return { frontmatter, content, tableOfContents }
+}
+
+/** Read only the frontmatter of a page file (no transform). */
+export function readPageFrontmatter(file: string): PageFrontmatter {
+  let source = fs.readFileSync(file, 'utf8')
+  let ast = Markdoc.parse(source)
+  if (ast.attributes.frontmatter) {
+    let parsed = yaml.load(ast.attributes.frontmatter)
+    if (parsed && typeof parsed === 'object') return parsed as PageFrontmatter
+  }
+  return {}
+}
+
+/** Raw Markdoc source for a URL pathname, or null when the page does not exist. */
+export function rawPageSource(pathname: string): string | null {
+  let file = contentFileForPath(pathname)
+  if (!file) return null
+  return fs.readFileSync(file, 'utf8')
 }

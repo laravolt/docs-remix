@@ -1,6 +1,7 @@
 import type { Handle, RemixNode } from 'remix/ui'
 
 import { getVersionForPath, versions } from '../lib/navigation.ts'
+import { Hero } from './hero.tsx'
 
 function Logomark(handle: Handle<{ className?: string }>) {
   return () => (
@@ -137,6 +138,8 @@ export function Layout(handle: Handle<{ pathname: string; children?: RemixNode }
     return (
       <div className="flex w-full flex-col">
         <Header pathname={pathname} />
+
+        {pathname === '/' && <Hero />}
 
         <div className="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
           <div className="hidden lg:relative lg:block lg:flex-none">

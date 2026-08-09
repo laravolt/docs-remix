@@ -21,10 +21,6 @@ Laravolt v7 targets the current Laravel and Livewire generation.
 
 Laravolt also relies on common PHP extensions: `bcmath`, `ctype`, `curl`, `gd`, `json`, `mbstring`, `openssl`, `pdo`, and `xml`.
 
-{% callout title="Upgrading from v6?" %}
-Laravolt v6 targeted Laravel 11/12 and Livewire 3. v7 keeps Laravel component compatibility broad while moving the UI foundation to Livewire 4 and Preline/Tailwind. Review [Upgrade guide](/v7/upgrade-guide) before adding v7 to an existing v6 project.
-{% /callout %}
-
 ## Install the package
 
 Add Laravolt to a fresh or existing Laravel application:
@@ -128,7 +124,7 @@ After installation:
 php artisan test
 ```
 
-If a step fails, check [Upgrade guide](/v7/upgrade-guide) for dependency notes and [Artisan commands](/v7/reference/artisan-commands) for command details.
+If a step fails, check [Artisan commands](/v7/reference/artisan-commands) for command details.
 
 ## What to read next
 

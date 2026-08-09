@@ -122,4 +122,3 @@ The current codebase exposes practical extension points for the most common gene
 
 - [Forms overview](/v7/forms/overview) — the first concrete example of Laravolt's convention-first APIs.
 - [Installation](/v7/getting-started/installation) — set up a project that follows these conventions from day one.
-- [Upgrade guide](/v7/upgrade-guide) — how the platform layer evolved from v6 to v7.

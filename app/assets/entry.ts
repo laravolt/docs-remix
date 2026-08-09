@@ -1,5 +1,6 @@
 import { run } from 'remix/ui'
 
+import { initLlmsActions } from './llms-copy.ts'
 import { initTheme } from './theme.ts'
 
 run({
@@ -19,3 +20,4 @@ run({
 })
 
 initTheme()
+initLlmsActions()

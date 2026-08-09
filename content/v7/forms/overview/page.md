@@ -148,7 +148,7 @@ Most admin forms are either "create" or "edit" against a model. Laravolt handles
 Bound forms pre-fill each field by the field name, fall back to `old()` input when validation fails, and preserve unsaved values on re-render.
 
 {% callout title="v7 compatibility with v6 syntax" %}
-`PrelineForm` keeps method signatures compatible with the earlier `Form` facade from v6 (`laravolt/semantic-form`). See [Upgrade guide](/v7/upgrade-guide) for the concrete migration steps.
+`PrelineForm` keeps method signatures compatible with the earlier `Form` facade from v6 (`laravolt/semantic-form`), so the form-building syntax will feel familiar if you have used previous Laravolt versions.
 {% /callout %}
 
 ## A complete example

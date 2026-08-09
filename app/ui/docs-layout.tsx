@@ -1,7 +1,43 @@
 import type { Handle, RemixNode } from 'remix/ui'
 
+import { markdownMirrorPath } from '../lib/llms.ts'
 import { getVersionForPath } from '../lib/navigation.ts'
 import type { Section } from '../lib/sections.ts'
+
+function LlmsActions(handle: Handle<{ pathname: string }>) {
+  return () => {
+    let { pathname } = handle.props
+    let mirror = markdownMirrorPath(pathname)
+
+    let secondary =
+      'inline-flex items-center gap-x-1 rounded-md px-2 py-1 text-xs font-medium text-slate-500 ring-1 ring-slate-200 ring-inset hover:bg-slate-50 hover:text-slate-700 dark:text-slate-400 dark:ring-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200'
+
+    return (
+      <div className="mt-4 flex flex-wrap items-center gap-2" data-llms-actions={mirror}>
+        <button type="button" data-llms-copy className={secondary}>
+          <svg viewBox="0 0 16 16" aria-hidden="true" className="h-3.5 w-3.5 fill-none stroke-current">
+            <path
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5.5 5.5V3.75c0-.69.56-1.25 1.25-1.25h4.5c.69 0 1.25.56 1.25 1.25v4.5c0 .69-.56 1.25-1.25 1.25H9.5m-4.75-5h-1.5c-.69 0-1.25.56-1.25 1.25v4.5c0 .69.56 1.25 1.25 1.25h4.5c.69 0 1.25-.56 1.25-1.25v-1.5"
+            />
+          </svg>
+          <span data-llms-copy-label>Copy Markdown</span>
+        </button>
+        <a href={mirror} className={secondary}>
+          View as Markdown
+        </a>
+        <a href="#" data-llms-open="chatgpt" target="_blank" rel="noopener noreferrer" className={secondary}>
+          Open in ChatGPT
+        </a>
+        <a href="#" data-llms-open="claude" target="_blank" rel="noopener noreferrer" className={secondary}>
+          Open in Claude
+        </a>
+      </div>
+    )
+  }
+}
 
 function DocsHeader(handle: Handle<{ pathname: string; title?: string }>) {
   return () => {
@@ -23,6 +59,7 @@ function DocsHeader(handle: Handle<{ pathname: string; title?: string }>) {
             {title}
           </h1>
         ) : null}
+        <LlmsActions pathname={pathname} />
       </header>
     )
   }
