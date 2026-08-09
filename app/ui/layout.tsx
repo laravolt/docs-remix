@@ -3,32 +3,30 @@ import type { Handle, RemixNode } from 'remix/ui'
 import { getVersionForPath, versions } from '../lib/navigation.ts'
 import { Hero } from './hero.tsx'
 
+/**
+ * The Laravolt mark: a white bolt on the brand's diagonal purple gradient.
+ * Both the bolt polygon and the gradient stops are traced from the original
+ * logo.png in the legacy docs repo, normalised to a 36x36 viewBox.
+ */
 function Logomark(handle: Handle<{ className?: string }>) {
   return () => (
-    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none" className={handle.props.className}>
-      <text x="6" y="28" fontSize="24" fontWeight="bold" fill="#38BDF8">
-        ⚡
-      </text>
-    </svg>
-  )
-}
-
-function Logo(handle: Handle<{ className?: string }>) {
-  return () => (
-    <svg aria-hidden="true" viewBox="0 0 250 36" fill="none" className={handle.props.className}>
-      <text x="6" y="28" fontSize="24" fontWeight="bold" fill="#38BDF8">
-        ⚡
-      </text>
-      <text
-        x="44"
-        y="25"
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="16"
-        fontWeight="bold"
-        className="fill-slate-700 dark:fill-sky-100"
-      >
-        Laravolt
-      </text>
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 36 36"
+      fill="none"
+      className={handle.props.className}
+    >
+      <defs>
+        <linearGradient id="laravolt-mark" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#b263d1" />
+          <stop offset="1" stopColor="#462eb4" />
+        </linearGradient>
+      </defs>
+      <rect width="36" height="36" rx="6.5" fill="url(#laravolt-mark)" />
+      <path
+        d="M27.72 5.31 20.79 13.59H24.48L18.45 19.8H22.32L7.38 31.77 14.49 23.22H10.89L16.92 17.1H12.87Z"
+        fill="#f3f5f6"
+      />
     </svg>
   )
 }
@@ -53,7 +51,7 @@ function VersionSelector(handle: Handle<{ pathname: string }>) {
             href={version.homeHref}
             className={
               version.id === active.id
-                ? 'rounded-md bg-white px-2 py-0.5 text-sky-600 shadow-sm dark:bg-slate-700 dark:text-sky-400'
+                ? 'rounded-md bg-white px-2 py-0.5 text-brand-700 shadow-sm dark:bg-slate-700 dark:text-brand-400'
                 : 'px-2 py-0.5 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
             }
           >
@@ -95,7 +93,7 @@ function Navigation(handle: Handle<{ pathname: string; className?: string }>) {
                       className={
                         'block w-full pl-3.5 before:pointer-events-none before:absolute before:top-1/2 before:-left-1 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full ' +
                         (link.href === pathname
-                          ? 'font-semibold text-sky-500 before:bg-sky-500'
+                          ? 'font-semibold text-brand-600 before:bg-brand-600 dark:text-brand-400 dark:before:bg-brand-400'
                           : 'text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300')
                       }
                     >
@@ -116,9 +114,11 @@ function Header(handle: Handle<{ pathname: string }>) {
   return () => (
     <header className="sticky top-0 z-50 flex flex-none flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 sm:px-6 lg:px-8 dark:bg-slate-900/95 dark:shadow-none dark:backdrop-blur-sm">
       <div className="relative flex grow basis-0 items-center space-x-3 sm:space-x-4">
-        <a href="/" aria-label="Home page">
-          <Logomark className="h-9 w-9 lg:hidden" />
-          <Logo className="hidden h-9 w-auto lg:block" />
+        <a href="/" aria-label="Home page" className="flex items-center gap-x-2.5">
+          <Logomark className="h-9 w-9" />
+          <span className="hidden font-display text-lg font-semibold tracking-tight text-slate-900 lg:block dark:text-white">
+            Laravolt
+          </span>
         </a>
       </div>
       <div className="relative flex basis-0 items-center justify-end gap-4 sm:gap-6 md:grow">

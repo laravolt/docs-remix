@@ -2,7 +2,7 @@ import type { Handle } from 'remix/ui'
 
 /**
  * Simplified icon set replacing the template's gradient-heavy SVG icons.
- * Solid sky/amber glyphs keep the visual language without the <defs> plumbing.
+ * Solid brand/amber glyphs keep the visual language without the <defs> plumbing.
  */
 export type IconName = 'installation' | 'presets' | 'plugins' | 'theming' | 'lightbulb' | 'warning'
 
@@ -23,21 +23,21 @@ const paths: Record<IconName, string> = {
 
 const colors: Record<string, string> = {
   amber: 'fill-amber-500',
-  sky: 'fill-sky-500',
+  brand: 'fill-brand-600 dark:fill-brand-400',
 }
 
 export function Icon(
   handle: Handle<{ icon: IconName | string; color?: string; className?: string }>,
 ) {
   return () => {
-    let { icon, color = 'sky', className } = handle.props
+    let { icon, color = 'brand', className } = handle.props
     let d = paths[icon as IconName] ?? paths.presets
 
     return (
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
-        className={[colors[color] ?? colors.sky, className].filter(Boolean).join(' ')}
+        className={[colors[color] ?? colors.brand, className].filter(Boolean).join(' ')}
       >
         <path d={d} />
       </svg>

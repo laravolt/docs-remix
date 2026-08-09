@@ -38,6 +38,24 @@
   --font-display: ui-sans-serif, system-ui, sans-serif;
 
   --container-8xl: 88rem;
+
+  /*
+   * Laravolt brand purple. `brand-500` and `brand-800` are sampled straight
+   * from the two ends of the logo's diagonal gradient; the rest of the ramp is
+   * interpolated in OKLCH so lightness steps stay perceptually even.
+   * On white use 600/700 for text (AA); on slate-900 use 300/400.
+   */
+  --color-brand-50: #f8f4fe;
+  --color-brand-100: #f0e6fd;
+  --color-brand-200: #e3cdfc;
+  --color-brand-300: #d1abf5;
+  --color-brand-400: #c285e5;
+  --color-brand-500: #b263d1;
+  --color-brand-600: #904fcd;
+  --color-brand-700: #6c3ec3;
+  --color-brand-800: #462eb4;
+  --color-brand-900: #342a87;
+  --color-brand-950: #211b58;
 }
 
 @layer base {

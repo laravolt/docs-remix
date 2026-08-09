@@ -72,7 +72,7 @@ function HeroBackground(handle: Handle<{ className?: string }>) {
         <circle cx="183.699" cy="375.75" r="10.438" transform="rotate(-180 183.699 375.75)" fill="#1E293B" stroke="#334155" />
         <circle cx="183.699" cy="563.625" r="10.438" transform="rotate(-180 183.699 563.625)" fill="#1E293B" stroke="#334155" />
         <circle cx="384.1" cy="651.3" r="10.438" transform="rotate(-180 384.1 651.3)" fill="#1E293B" stroke="#334155" />
-        <circle cx="484.301" cy="574.062" r="10.438" transform="rotate(-180 484.301 574.062)" fill="#0EA5E9" fillOpacity=".42" stroke="#0EA5E9" />
+        <circle cx="484.301" cy="574.062" r="10.438" transform="rotate(-180 484.301 574.062)" fill="#b263d1" fillOpacity=".42" stroke="#b263d1" />
         <circle cx="384.1" cy="749.412" r="10.438" transform="rotate(-180 384.1 749.412)" fill="#1E293B" stroke="#334155" />
         <circle cx="384.1" cy="1027.05" r="10.438" transform="rotate(-180 384.1 1027.05)" stroke="#334155" />
         <circle cx="283.9" cy="924.767" r="10.438" transform="rotate(-180 283.9 924.767)" stroke="#334155" />
@@ -95,8 +95,8 @@ function HeroCode(handle: Handle<{}>) {
 
   return () => (
     <div className="relative rounded-2xl bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur-sm">
-      <div className="absolute -top-px right-11 left-20 h-px bg-gradient-to-r from-sky-300/0 via-sky-300/70 to-sky-300/0" />
-      <div className="absolute right-20 -bottom-px left-11 h-px bg-gradient-to-r from-blue-400/0 via-blue-400 to-blue-400/0" />
+      <div className="absolute -top-px right-11 left-20 h-px bg-gradient-to-r from-brand-400/0 via-brand-400/70 to-brand-400/0" />
+      <div className="absolute right-20 -bottom-px left-11 h-px bg-gradient-to-r from-brand-600/0 via-brand-600 to-brand-600/0" />
       <div className="pt-4 pl-4">
         <TrafficLightsIcon className="h-2.5 w-auto stroke-slate-500/30" />
         <div className="mt-4 flex space-x-2 text-xs">
@@ -106,7 +106,7 @@ function HeroCode(handle: Handle<{}>) {
               className={
                 'flex h-6 rounded-full ' +
                 (tab.isActive
-                  ? 'bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 p-px font-medium text-sky-300'
+                  ? 'bg-gradient-to-r from-brand-400/30 via-brand-400 to-brand-400/30 p-px font-medium text-brand-300'
                   : 'text-slate-500')
               }
             >
@@ -149,13 +149,13 @@ export function Hero(handle: Handle<{}>) {
           <div className="relative z-10 md:text-center lg:text-left">
             <img
               className="absolute right-full bottom-full -mr-72 -mb-56 opacity-50"
-              src="/images/blur-cyan.png"
+              src="/images/blur-violet.png"
               alt=""
               width={530}
               height={530}
             />
             <div className="relative">
-              <p className="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              <p className="inline bg-gradient-to-r from-brand-200 via-brand-400 to-brand-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
                 Digital empowerment platform.
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
@@ -165,7 +165,7 @@ export function Hero(handle: Handle<{}>) {
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <a
                   href="/v7/getting-started/installation"
-                  className="rounded-full bg-sky-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-sky-200 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+                  className="rounded-full bg-brand-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-brand-200 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-300/50 active:bg-brand-400"
                 >
                   Get started
                 </a>
@@ -215,20 +215,20 @@ export function Hero(handle: Handle<{}>) {
             <div className="relative">
               <img
                 className="absolute -top-64 -right-64"
-                src="/images/blur-cyan.png"
+                src="/images/blur-violet.png"
                 alt=""
                 width={530}
                 height={530}
               />
               <img
                 className="absolute -right-44 -bottom-40"
-                src="/images/blur-indigo.png"
+                src="/images/blur-brand.png"
                 alt=""
                 width={567}
                 height={567}
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10 blur-lg" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-sky-300 via-sky-300/70 to-blue-300 opacity-10" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-brand-400 via-brand-400/70 to-brand-600 opacity-10 blur-lg" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-brand-400 via-brand-400/70 to-brand-600 opacity-10" />
               <HeroCode />
             </div>
           </div>
