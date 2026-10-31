@@ -93,10 +93,10 @@ async function main() {
       }
 
       // `.md` mirror for every docs page (used by LLM/agent consumers).
-      if (route !== '/') {
-        const mirror = await fetch(`${base}${route}.md`)
-        if (mirror.ok) writeFile(`${route}.md`, await mirror.text())
-      }
+      // The homepage's mirror is /index.md, the URL its "Copy Markdown" button uses.
+      const mirrorPath = route === '/' ? '/index.md' : `${route}.md`
+      const mirror = await fetch(`${base}${mirrorPath}`)
+      if (mirror.ok) writeFile(mirrorPath, await mirror.text())
     }
 
     writeFile('llms.txt', await (await fetchOk(`${base}/llms.txt`)).text())

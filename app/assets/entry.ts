@@ -1,5 +1,6 @@
 import { run } from 'remix/ui'
 
+import { initCodeCopy } from './code-copy.ts'
 import { initLlmsActions } from './llms-copy.ts'
 import { initTheme } from './theme.ts'
 
@@ -21,3 +22,4 @@ run({
 
 initTheme()
 initLlmsActions()
+initCodeCopy()
