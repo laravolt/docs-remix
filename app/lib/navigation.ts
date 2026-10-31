@@ -28,6 +28,10 @@ export const v7Navigation: NavSection[] = [
     ],
   },
   {
+    title: 'Showcase',
+    links: [{ title: 'VoltProcure demo', href: '/showcase/voltprocure' }],
+  },
+  {
     title: 'Core concepts',
     links: [
       {
