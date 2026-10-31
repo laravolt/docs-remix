@@ -1,6 +1,6 @@
 # Performance Optimization
 
-Comprehensive guide to optimizing Laravolt v7 applications for production performance.
+Comprehensive guide to optimizing Laravolt v8 applications for production performance.
 
 ## Overview
 
@@ -441,6 +441,16 @@ php artisan octane:start --watch
 # Production
 php artisan octane:start --server=swoole --host=0.0.0.0 --port=8000 --workers=4
 ```
+
+### Laravolt under Octane
+
+Laravolt is not installed with Octane (since v8.0). Require `laravel/octane` yourself, and use **laravolt/laravolt 8.0.1 or later**. Older versions rebuilt the sidebar menu on every request inside a long-running worker, so latency grew with every request. In production they also cached one user's menu for everyone, which made every page after the first return 500 on Laravel 13 with a file, database or redis cache.
+
+What to keep in mind:
+
+- Register menu items with `app('laravolt.menu.builder')->register(...)` or `config/laravolt/menu/*.php` in a service provider's `boot()`. They are registered once per worker, and the menu is rebuilt for each request from those registrations, filtered by the current user's permissions.
+- Do not add items to `app('laravolt.menu.sidebar')` from a request (a controller or middleware). The sidebar singleton lives as long as the worker.
+- For a complete, measured example — Octane on FrankenPHP in worker mode, Docker Compose, SQLite tuned for concurrency — see [laravolt/voltprocure](https://github.com/laravolt/voltprocure).
 
 ### Octane-Safe Code
 

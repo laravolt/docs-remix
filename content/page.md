@@ -1,18 +1,18 @@
 ---
-title: Laravolt v7
+title: Laravolt v8
 ---
 
-# Laravolt v7
+# Laravolt v8
 
-Laravolt v7 is an **AI-ready Laravel application platform** for teams building real business systems quickly, safely, and consistently. {% .lead %}
+Laravolt v8 is an **AI-ready Laravel application platform** for teams building real business systems quickly, safely, and consistently. {% .lead %}
 
 It gives Laravel teams a complete, opinionated foundation for internal tools, enterprise applications, admin panels, operational workflows, and AI-assisted business systems.
 
 {% quick-links %}
 
-{% quick-link title="Start with v7" icon="installation" href="/introduction" description="Learn the mental model behind Laravolt v7 and when it is the right fit for your Laravel project." /%}
+{% quick-link title="Start with v8" icon="installation" href="/introduction" description="Learn the mental model behind Laravolt v8 and when it is the right fit for your Laravel project." /%}
 
-{% quick-link title="Install Laravolt" icon="presets" href="/getting-started/installation" description="Set up Laravolt v7, publish its assets, run migrations, and create the first administrator account." /%}
+{% quick-link title="Install Laravolt" icon="presets" href="/getting-started/installation" description="Set up Laravolt v8, publish its assets, run migrations, and create the first administrator account." /%}
 
 {% quick-link title="AI-ready platform" icon="plugins" href="/core-concepts/ai-ready-platform" description="See how conventions, safe defaults, and predictable APIs make Laravolt projects easier for teams and coding agents to extend." /%}
 
@@ -24,11 +24,11 @@ It gives Laravel teams a complete, opinionated foundation for internal tools, en
 
 Most business applications repeat the same foundations: authentication, admin navigation, roles and permissions, forms, tables, CRUD flows, audit trails, files, notifications, queues, and integrations.
 
-Laravolt v7 turns those foundations into conventions instead of one-off glue code. You still build a Laravel application, but the routine product surface is structured enough that humans, reviewers, and AI coding assistants can reason about it safely.
+Laravolt v8 turns those foundations into conventions instead of one-off glue code. You still build a Laravel application, but the routine product surface is structured enough that humans, reviewers, and AI coding assistants can reason about it safely.
 
 ## Why AI-ready matters
 
-AI is useful when a project has clear boundaries. Laravolt v7 makes those boundaries explicit:
+AI is useful when a project has clear boundaries. Laravolt v8 makes those boundaries explicit:
 
 - predictable places for forms, tables, actions, menus, policies, and configuration
 - composable APIs that reduce guesswork when extending generated screens
@@ -40,4 +40,4 @@ AI-ready does not mean replacing engineers. It means the codebase is structured 
 
 ## Keep v6 docs available
 
-The v6 documentation remains available under `/v6`. New projects should start with the v7 section unless they are maintaining an existing v6 application.
+The v6 documentation remains available under `/v6`. New projects should start with the current (v8) documentation unless they are maintaining an existing v6 application.

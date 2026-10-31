@@ -4,7 +4,7 @@ title: AI Task Patterns
 
 # AI Task Patterns
 
-Practical prompt templates for common Laravolt v7 tasks. Each pattern includes the prompt, expected output, verification steps, and common pitfalls. {% .lead %}
+Practical prompt templates for common Laravolt v8 tasks. Each pattern includes the prompt, expected output, verification steps, and common pitfalls. {% .lead %}
 
 ## How to use these patterns
 
@@ -19,7 +19,7 @@ Practical prompt templates for common Laravolt v7 tasks. Each pattern includes t
 ### Prompt template
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Generate CRUD module for {table_name}
 
@@ -44,7 +44,7 @@ Deliverables:
 ### Example: Product CRUD
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Generate CRUD module for products
 
@@ -117,7 +117,7 @@ php artisan serve
 ### Prompt template
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add approval workflow to {ModuleName}
 
@@ -155,7 +155,7 @@ Deliverables:
 ### Example: Purchase Order approval
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add approval workflow to PurchaseOrder
 
@@ -235,7 +235,7 @@ php artisan test --filter=PurchaseOrderApprovalTest
 ### Prompt template
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Customize {ModuleName} form with validation
 
@@ -268,7 +268,7 @@ Deliverables:
 ### Example: Product form customization
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Customize Product form with validation
 
@@ -396,7 +396,7 @@ php artisan test --filter=ProductTest
 ### Prompt template
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add search and filter to {ModuleName} listing
 
@@ -423,7 +423,7 @@ Deliverables:
 ### Example: Product listing with search and filters
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add search and filter to Product listing
 
@@ -554,7 +554,7 @@ php artisan serve
 ### Prompt template
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add row actions to {ModuleName} listing
 
@@ -583,7 +583,7 @@ Deliverables:
 ### Example: Product listing with actions
 
 ```txt
-Read /llms.txt for Laravolt v7 conventions.
+Read /llms.txt for Laravolt v8 conventions.
 
 Task: Add row actions to Product listing
 
@@ -741,7 +741,7 @@ php artisan serve
 
 ## Summary
 
-These patterns cover the most common Laravolt v7 tasks:
+These patterns cover the most common Laravolt v8 tasks:
 
 1. **Generate CRUD** - Bootstrap from table to working module
 2. **Add approval workflow** - Status transitions with permissions

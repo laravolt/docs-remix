@@ -31,7 +31,7 @@ php artisan laravolt:clap --table=posts --template=custom --force
 | `--template` | The template to use (default: "laravolt") |
 | `--force` | Overwrite existing files |
 
-## What's Generated in v7
+## What's Generated
 
 ### FormRequest-Backed Forms
 
@@ -105,8 +105,8 @@ Publish and customize the stub templates when your project has its own conventio
 php artisan vendor:publish --tag=thunderclap-stubs
 ```
 
-Point `--template` to your customized template set. Generated code follows your stubs while keeping the v7 conventions (FormRequest, permission gate) unless you remove them.
+Point `--template` to your customized template set. Generated code follows your stubs while keeping the Laravolt conventions (FormRequest, permission gate) unless you remove them.
 
 {% callout type="note" title="Bringing modules from a v6 application?" %}
-Modular Thunderclap modules can be moved into a fresh v7 base application one by one. After moving a module, align it with v7 conventions: add `Requests/Store.php` and `Requests/Update.php`, update its views to Preline/Tailwind, and grant the `modules.<module-name>.view` permission.
+Modular Thunderclap modules can be moved into a fresh v8 base application one by one. After moving a module, align it with Laravolt conventions: add `Requests/Store.php` and `Requests/Update.php`, update its views to Preline/Tailwind, and grant the `modules.<module-name>.view` permission.
 {% /callout %}

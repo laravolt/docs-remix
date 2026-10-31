@@ -4,7 +4,7 @@ title: Form validation
 
 # Form validation
 
-Laravolt v7 forms use Laravel's `FormRequest` as the single source of truth for validation. The same rules drive browser validation attributes, `data-validation-rules` JSON, error display, and the final server-side check. {% .lead %}
+Laravolt v8 forms use Laravel's `FormRequest` as the single source of truth for validation. The same rules drive browser validation attributes, `data-validation-rules` JSON, error display, and the final server-side check. {% .lead %}
 
 ## The principle
 

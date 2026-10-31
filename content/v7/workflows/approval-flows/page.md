@@ -4,7 +4,7 @@ title: Approval flows
 
 # Approval flows
 
-Multi-step approval workflows route documents through sequential approvers with state tracking, notifications, and audit trails. Laravolt v7 uses state machines to model approval flows. {% .lead %}
+Multi-step approval workflows route documents through sequential approvers with state tracking, notifications, and audit trails. Laravolt v8 uses state machines to model approval flows. {% .lead %}
 
 ## Why state machines
 

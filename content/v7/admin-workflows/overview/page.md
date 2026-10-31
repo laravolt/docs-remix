@@ -4,7 +4,7 @@ title: Admin workflows
 
 # Admin workflows
 
-Laravolt v7 is designed for the boring-but-critical screens behind real business systems: lists, forms, actions, approvals, imports, exports, and operational dashboards. {% .lead %}
+Laravolt v8 is designed for the boring-but-critical screens behind real business systems: lists, forms, actions, approvals, imports, exports, and operational dashboards. {% .lead %}
 
 These screens are often called “admin panels”, but in production they become workflow software. People use them to move work forward, enforce rules, and leave an auditable trail.
 
@@ -151,7 +151,7 @@ Use Laravel events, model observers, activity logs, or workflow state transition
 
 ## Thunderclap scaffolding
 
-When a database table already exists, use [Thunderclap](/admin-workflows/thunderclap) as the default v7 path for generating the first version of a Laravolt admin module. It can scaffold the model, controller, form requests, views, routes, table view, service provider, and tests from the table schema.
+When a database table already exists, use [Thunderclap](/admin-workflows/thunderclap) as the default path for generating the first version of a Laravolt admin module. It can scaffold the model, controller, form requests, views, routes, table view, service provider, and tests from the table schema.
 
 Use the generated module as a starting point, then review authorization, validation, menu entries, labels, relationships, and business-specific actions before shipping it.
 
@@ -169,7 +169,7 @@ Admin workflows are a good fit for AI-assisted development because they follow r
 A useful prompt:
 
 ```txt
-Add a Laravolt v7 admin workflow for PurchaseOrder.
+Add a Laravolt v8 admin workflow for PurchaseOrder.
 Create index/create/edit screens, FormRequests, policy methods, sidebar menu entry,
 and a table with search by number and supplier.
 Use PrelineForm for forms. Use Suitable for the listing. Do not invent package APIs; mark any uncertain app-specific behavior for review.
@@ -178,6 +178,6 @@ Use PrelineForm for forms. Use Suitable for the listing. Do not invent package A
 ## What to read next
 
 - [Forms overview](/forms/overview) — form conventions for create/edit screens.
-- [Business actions](/admin-workflows/business-actions) — the v7 convention for non-CRUD operations on top of generated modules.
+- [Business actions](/admin-workflows/business-actions) — the Laravolt convention for non-CRUD operations on top of generated modules.
 - [Access control](/security/access-control) — protect resources and actions.
 - [Browser testing](/testing/browser-testing) — verify admin workflows in a real browser.

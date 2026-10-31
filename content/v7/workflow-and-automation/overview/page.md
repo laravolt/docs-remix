@@ -4,7 +4,7 @@ title: Workflow and automation
 
 # Workflow and automation
 
-Laravolt v7 includes workflow primitives for teams that need more than CRUD: approvals, task handoffs, process state, background synchronization, and operational evidence. {% .lead %}
+Laravolt v8 includes workflow primitives for teams that need more than CRUD: approvals, task handoffs, process state, background synchronization, and operational evidence. {% .lead %}
 
 Use the workflow module when a business process has named steps, multiple actors, or state that must be reviewed later.
 

@@ -4,7 +4,7 @@ title: Buttons
 
 # Buttons
 
-Buttons trigger actions, submit forms, and navigate between pages. Laravolt v7 uses Preline UI button styles with consistent variants across the platform. {% .lead %}
+Buttons trigger actions, submit forms, and navigate between pages. Laravolt v8 uses Preline UI button styles with consistent variants across the platform. {% .lead %}
 
 ## Button variants
 

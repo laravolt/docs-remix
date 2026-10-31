@@ -4,7 +4,7 @@ title: Input masking
 
 # Input masking
 
-Laravolt v7 ships a thin adapter around [Inputmask](https://github.com/RobinHerbots/Inputmask). A `->mask(...)` call on any text-like field produces the `data-inputmask` options Inputmask expects, along with sensible `inputmode` attributes for mobile keyboards. {% .lead %}
+Laravolt v8 ships a thin adapter around [Inputmask](https://github.com/RobinHerbots/Inputmask). A `->mask(...)` call on any text-like field produces the `data-inputmask` options Inputmask expects, along with sensible `inputmode` attributes for mobile keyboards. {% .lead %}
 
 ## Why masks, not regex
 

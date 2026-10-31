@@ -4,12 +4,12 @@ title: Browser testing
 
 # Browser testing
 
-Laravolt v7 uses Pest Browser and Playwright to test critical UI flows in a real browser. {% .lead %}
+Laravolt v8 uses Pest Browser and Playwright to test critical UI flows in a real browser. {% .lead %}
 
 Unit and feature tests prove the backend works. Browser tests prove the product surface works: pages render, forms are usable, validation appears, menus are visible, and role-protected actions behave the way users expect.
 
-{% callout title="v7 work in progress" type="warning" %}
-Browser testing support is being introduced for Laravolt v7. Verify the final command names and CI details against the release branch before copying this page into production onboarding.
+{% callout title="Work in progress" type="warning" %}
+Browser testing support is being introduced for Laravolt v8. Verify the final command names and CI details against the release branch before copying this page into production onboarding.
 {% /callout %}
 
 ## What to test in a browser
@@ -32,7 +32,7 @@ Keep business rules in feature/unit tests. Keep browser tests focused on the int
 
 ## Install dependencies
 
-Laravolt v7 includes Pest Browser support in the platform setup. A project that runs browser tests also needs Playwright in the application root.
+Laravolt v8 includes Pest Browser support in the platform setup. A project that runs browser tests also needs Playwright in the application root.
 
 ```bash
 composer require --dev pestphp/pest-plugin-browser

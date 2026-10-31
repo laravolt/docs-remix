@@ -4,7 +4,7 @@ title: AI-ready platform
 
 # AI-ready platform
 
-Laravolt v7 is designed so both human developers and AI coding agents can reason about a project without guessing. This page explains what "AI-ready" means in practice, why it matters, and how to use it. {% .lead %}
+Laravolt v8 is designed so both human developers and AI coding agents can reason about a project without guessing. This page explains what "AI-ready" means in practice, why it matters, and how to use it. {% .lead %}
 
 ## Why AI-ready is an engineering stance
 
@@ -12,7 +12,7 @@ Business applications are rarely hard because of one algorithm. They become hard
 
 When those decisions are implicit, every change requires reading the whole codebase. That is bad for humans. It is worse for AI coding assistants, which rely on obvious structure and clear extension points to produce safe edits.
 
-Laravolt v7 treats AI-readiness as ordinary engineering discipline:
+Laravolt v8 treats AI-readiness as ordinary engineering discipline:
 
 - **Explicit conventions** — forms, tables, menus, actions, permissions, and configuration live in predictable places.
 - **Composable APIs** — each abstraction is a fluent builder with documented methods, not a pile of magic.

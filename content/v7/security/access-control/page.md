@@ -4,7 +4,7 @@ title: Access control
 
 # Access control
 
-Laravolt v7 treats access control as a platform concern: routes, policies, menus, and UI actions should all describe the same permission model. {% .lead %}
+Laravolt v8 treats access control as a platform concern: routes, policies, menus, and UI actions should all describe the same permission model. {% .lead %}
 
 Permissions are not only about hiding buttons. They define who is allowed to change business state.
 
@@ -120,7 +120,7 @@ This keeps the UI honest: users only see actions that make sense for their role 
 
 ## Role and permission changes
 
-Laravolt v7 invalidates access after role or permission updates so permission changes take effect immediately. This protects teams from stale sessions where a user keeps access after a role was removed.
+Laravolt v8 invalidates access after role or permission updates so permission changes take effect immediately. This protects teams from stale sessions where a user keeps access after a role was removed.
 
 {% callout title="Operational note" %}
 When changing roles in production, communicate the expected session impact. Users may need to sign in again after their permissions are updated.

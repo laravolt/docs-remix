@@ -4,7 +4,7 @@ title: AI-ready development guide
 
 # AI-ready development guide
 
-Laravolt v7 is AI-ready because its conventions make work easier to describe, review, and test. {% .lead %}
+Laravolt v8 is AI-ready because its conventions make work easier to describe, review, and test. {% .lead %}
 
 The goal is not to let a coding agent improvise an application. The goal is to give humans and agents a shared map: where code belongs, which APIs are safe to extend, and what evidence proves the change works.
 
@@ -66,7 +66,7 @@ Build an inventory module with AI.
 Better:
 
 ```txt
-Build a Laravolt v7 inventory module for Product.
+Build a Laravolt v8 inventory module for Product.
 Create controller, FormRequests, policy, menu entry, Suitable list, PrelineForm create/edit views,
 and tests for product.read/create/update permissions.
 Do not add destructive actions without policy checks.

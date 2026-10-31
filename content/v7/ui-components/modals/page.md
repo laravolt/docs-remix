@@ -4,7 +4,7 @@ title: Modals
 
 # Modals
 
-Modals display focused content and actions without leaving the current page. Laravolt v7 uses Alpine.js and Preline UI for accessible, keyboard-navigable modals. {% .lead %}
+Modals display focused content and actions without leaving the current page. Laravolt v8 uses Alpine.js and Preline UI for accessible, keyboard-navigable modals. {% .lead %}
 
 ## Basic modal
 

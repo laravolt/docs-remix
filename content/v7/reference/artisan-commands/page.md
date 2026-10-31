@@ -4,7 +4,7 @@ title: Artisan commands
 
 # Artisan commands
 
-Laravolt v7 ships Artisan commands for installation, user management, permissions, scaffolding, assets, workflow checks, and module generation. {% .lead %}
+Laravolt v8 ships Artisan commands for installation, user management, permissions, scaffolding, assets, workflow checks, and module generation. {% .lead %}
 
 Run `php artisan list laravolt` in your application to see the exact commands available after installation.
 

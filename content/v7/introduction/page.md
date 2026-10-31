@@ -2,9 +2,9 @@
 title: Introduction
 ---
 
-# What is Laravolt v7?
+# What is Laravolt v8?
 
-Laravolt v7 is an **AI-ready Laravel application platform** for teams that need to ship business software without rebuilding the same foundation in every project. {% .lead %}
+Laravolt v8 is an **AI-ready Laravel application platform** for teams that need to ship business software without rebuilding the same foundation in every project. {% .lead %}
 
 It combines Laravel conventions, Thunderclap scaffolding, admin UI building blocks, form and table abstractions, access control, workflow patterns, and production defaults into one coherent platform.
 

@@ -1,6 +1,6 @@
 # Configuration Reference
 
-Complete reference for Laravolt v7 configuration files, environment variables, and service provider settings.
+Complete reference for Laravolt v8 configuration files, environment variables, and service provider settings.
 
 ## Core Laravolt Configuration
 
