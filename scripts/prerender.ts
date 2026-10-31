@@ -8,7 +8,8 @@
  *    legacy versions keep their `/v6/...` prefix).
  * 3. Fetch each HTML page + its `.md` mirror + `llms.txt` / `llms-full.txt`.
  * 4. Download every `/assets/*` file referenced by the rendered HTML.
- * 5. Copy `public/` into `dist/` and emit `_redirects` for old `/v7/*` URLs.
+ * 5. Copy `public/` into `dist/` and emit `_redirects` for old `/v7/*` URLs and
+ *    `_headers` so `.ts` modules are served as JavaScript.
  */
 import { spawn } from 'node:child_process'
 import * as fs from 'node:fs'
@@ -101,15 +102,39 @@ async function main() {
     writeFile('llms.txt', await (await fetchOk(`${base}/llms.txt`)).text())
     writeFile('llms-full.txt', await (await fetchOk(`${base}/llms-full.txt`)).text())
 
-    for (const assetUrl of assetUrls) {
+    // The HTML only names the entry module; follow its static and dynamic
+    // imports so every module it loads is exported too.
+    const queue = [...assetUrls]
+    while (queue.length > 0) {
+      const assetUrl = queue.shift() as string
       const res = await fetchOk(`${base}${assetUrl}`)
-      writeFile(assetUrl, Buffer.from(await res.arrayBuffer()))
+      const body = Buffer.from(await res.arrayBuffer())
+      // Import URLs keep percent-encoding (`%40remix-run`). Write the decoded
+      // path the asset server looks up, and the literal one as a fallback.
+      writeFile(decodeURIComponent(assetUrl), body)
+      if (decodeURIComponent(assetUrl) !== assetUrl) writeFile(assetUrl, body)
+
+      if (/\.(m?js|tsx?)$/.test(assetUrl)) {
+        for (const match of body.toString('utf8').matchAll(/(?:from|import)\s*\(?\s*["'](\/assets\/[^"']+)["']/g)) {
+          if (!assetUrls.has(match[1])) {
+            assetUrls.add(match[1])
+            queue.push(match[1])
+          }
+        }
+      }
     }
 
     copyDir(path.join(root, 'public'), distDir)
 
     // Old /v7-prefixed URLs permanently redirect to the root equivalents.
     writeFile('_redirects', ['/v7 / 301', '/v7/* /:splat 301', ''].join('\n'))
+
+    // Modules keep their source extension (.ts). Cloudflare would serve those
+    // as video/mp2t, and browsers refuse to run a module with that MIME type.
+    writeFile(
+      '_headers',
+      ['/assets/*.ts', '  Content-Type: text/javascript; charset=utf-8', '/assets/*.tsx', '  Content-Type: text/javascript; charset=utf-8', ''].join('\n'),
+    )
 
     writeFile(
       '404.html',
