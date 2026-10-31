@@ -4,7 +4,7 @@ title: Cards
 
 # Cards
 
-Cards group related content and actions into contained, scannable blocks. Laravolt v7 uses Preline UI card patterns for consistent spacing, borders, and dark mode support. {% .lead %}
+Cards group related content and actions into contained, scannable blocks. Laravolt v8 uses Preline UI card patterns for consistent spacing, borders, and dark mode support. {% .lead %}
 
 ## Basic card
 

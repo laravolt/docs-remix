@@ -4,11 +4,11 @@ title: AI Context
 
 # AI Context
 
-This page is the canonical entry point for coding agents that need to understand Laravolt v7 before generating code. Feed this page (or `/llms-full.txt`) to your agent as project context. {% .lead %}
+This page is the canonical entry point for coding agents that need to understand Laravolt v8 before generating code. Feed this page (or `/llms-full.txt`) to your agent as project context. {% .lead %}
 
-## What is Laravolt v7?
+## What is Laravolt v8?
 
-Laravolt v7 is a Laravel application platform for teams building internal tools, enterprise apps, admin panels, and workflow systems. It provides:
+Laravolt v8 is a Laravel application platform for teams building internal tools, enterprise apps, admin panels, and workflow systems. It provides:
 
 - **Thunderclap** — CRUD module generator from database tables
 - **PrelineForm** — form builder with Preline UI + Tailwind CSS + FormRequest validation
@@ -32,8 +32,8 @@ Laravolt v7 is a Laravel application platform for teams building internal tools,
 
 ## Stack
 
-- PHP 8.4, Laravel 13, Livewire 4
-- Preline UI + Tailwind CSS 4
+- PHP 8.3+ (starter kit: 8.5), Laravel 12 or 13, Livewire 4
+- Preline UI 5 + Tailwind CSS 4.3
 - Pest 4 (unit + browser via Playwright)
 - SQLite (dev) / PostgreSQL (prod)
 
@@ -67,10 +67,10 @@ curl https://docs.laravolt.dev/llms.txt
 ## Common agent pitfalls
 
 1. **Inventing package APIs** — Laravolt's public surface is documented. If a method isn't in the docs, it probably doesn't exist. Ask the agent to mark uncertain calls for review.
-2. **Skipping FormRequest** — Every form must have a FormRequest. Inline validation in controllers is not the v7 convention.
+2. **Skipping FormRequest** — Every form must have a FormRequest. Inline validation in controllers is not the Laravolt convention.
 3. **Ignoring permissions** — Generated modules gate on `modules.<name>.view`. Custom actions need their own permission + policy method.
 4. **Raw `<table>` markup** — Use `TableView` (Livewire) or `Suitable` (server-rendered). Never hand-roll table HTML in admin pages.
-5. **Fomantic/Semantic classes** — v7 is Preline + Tailwind only. No `ui button`, `ui segment`, etc.
+5. **Fomantic/Semantic classes** — Laravolt 7 and later use Preline + Tailwind only. No `ui button`, `ui segment`, etc.
 
 ## Related pages
 

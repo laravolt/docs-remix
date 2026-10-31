@@ -30,7 +30,7 @@ php artisan laravolt:admin Administrator admin@laravolt.dev secret
 If you already have a Laravel project, you can quickly add Laravolt 7:
 
 ```bash
-composer require laravolt/laravolt:^7.0
+composer require laravolt/laravolt:^8.1
 php artisan laravolt:install
 ```
 

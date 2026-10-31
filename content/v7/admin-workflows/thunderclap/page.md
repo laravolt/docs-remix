@@ -4,13 +4,13 @@ title: Thunderclap
 
 # Thunderclap
 
-Thunderclap is one of the fundamental building blocks in Laravolt v7. It generates admin modules from database tables so teams can start from a working CRUD surface, then refine the generated code into a production workflow. {% .lead %}
+Thunderclap is one of the fundamental building blocks in Laravolt v8. It generates admin modules from database tables so teams can start from a working CRUD surface, then refine the generated code into a production workflow. {% .lead %}
 
-In v7, Thunderclap is the default path for turning an existing schema into a conventional Laravolt module. It gives humans and AI coding agents the same predictable starting point: model, controller, form requests, views, routes, table view, tests, and module provider.
+Since v7, Thunderclap is the default path for turning an existing schema into a conventional Laravolt module. It gives humans and AI coding agents the same predictable starting point: model, controller, form requests, views, routes, table view, tests, and module provider.
 
 ## What Thunderclap is
 
-Thunderclap is the v7 scaffolding foundation for CRUD-heavy business software. The `laravolt:clap` command reads table metadata through Doctrine DBAL, copies a stub template, replaces placeholders, and writes a module into the configured target directory.
+Thunderclap is the scaffolding foundation for CRUD-heavy business software. The `laravolt:clap` command reads table metadata through Doctrine DBAL, copies a stub template, replaces placeholders, and writes a module into the configured target directory.
 
 The default Laravolt template can generate:
 
@@ -26,11 +26,11 @@ The default Laravolt template can generate:
 
 Treat the output as a strong first draft. It gives each resource a conventional place, but application-specific authorization, validation, relationships, menus, labels, and tests still need review.
 
-## Why it is fundamental in v7
+## Why it is fundamental
 
-Laravolt v7 treats generated scaffolding as part of the platform contract, not as disposable boilerplate. Thunderclap turns the most common starting point for enterprise applications — an existing table or migration — into files that follow the same names, folders, and review points across projects.
+Laravolt v8 treats generated scaffolding as part of the platform contract, not as disposable boilerplate. Thunderclap turns the most common starting point for enterprise applications — an existing table or migration — into files that follow the same names, folders, and review points across projects.
 
-That matters because repeated structure is what makes v7 AI-ready:
+That matters because repeated structure is what makes Laravolt AI-ready:
 
 - developers can inspect a generated module without learning a new project-specific pattern
 - coding agents can modify forms, tables, requests, and routes in predictable places

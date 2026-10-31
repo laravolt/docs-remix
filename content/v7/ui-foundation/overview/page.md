@@ -4,7 +4,7 @@ title: UI foundation
 
 # UI foundation
 
-Laravolt v7 uses Preline UI, Tailwind CSS, Blade components, and Laravel conventions to make business interfaces consistent by default. {% .lead %}
+Laravolt v8 uses Preline UI, Tailwind CSS, Blade components, and Laravel conventions to make business interfaces consistent by default. {% .lead %}
 
 The goal is not to hide HTML from Laravel developers. The goal is to make the common parts of internal tools — layouts, navigation, forms, tables, actions, alerts, cards, and empty states — predictable across the whole application.
 
@@ -18,7 +18,7 @@ That creates three problems:
 - developers copy brittle markup instead of reusing platform conventions
 - AI coding assistants have to guess which UI pattern is correct
 
-Laravolt v7 solves this by making the UI layer explicit: Preline UI provides the component language, Tailwind CSS provides the design tokens, and Laravolt wraps the repetitive application patterns in Laravel-native APIs.
+Laravolt v8 solves this by making the UI layer explicit: Preline UI provides the component language, Tailwind CSS provides the design tokens, and Laravolt wraps the repetitive application patterns in Laravel-native APIs.
 
 ## The stack
 
@@ -48,7 +48,7 @@ A Laravolt screen should start from the platform layout instead of creating a on
 </x-volt-app>
 ```
 
-The current v7 views include `<x-volt-app>`, `<x-volt-button>`, `<x-volt-alert>`, `<x-volt-panel>`, `<x-volt-table>`, `<x-volt-chart>`, `<x-volt-datepicker>`, `<x-volt-file-upload>`, `<x-volt-notification>`, `<x-volt-titlebar>`, and related UI components. A dedicated component reference can expand this list later.
+The current views include `<x-volt-app>`, `<x-volt-button>`, `<x-volt-alert>`, `<x-volt-panel>`, `<x-volt-table>`, `<x-volt-chart>`, `<x-volt-datepicker>`, `<x-volt-file-upload>`, `<x-volt-notification>`, `<x-volt-titlebar>`, and related UI components. A dedicated component reference can expand this list later.
 
 ## Buttons and actions
 

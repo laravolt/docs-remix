@@ -1,6 +1,6 @@
 # Common Issues and Troubleshooting
 
-This guide covers common issues you may encounter when working with Laravolt v7 and provides systematic solutions.
+This guide covers common issues you may encounter when working with Laravolt v8 and provides systematic solutions.
 
 ## Installation and Setup Issues
 
@@ -13,8 +13,8 @@ composer require laravolt/laravolt
 ```
 
 **Diagnosis:**
-- Laravel version incompatibility (Laravolt v7 requires Laravel 10+)
-- PHP version mismatch (requires PHP 8.1+)
+- Laravel version incompatibility (Laravolt v8 requires Laravel 12.68+ or 13.29+)
+- PHP version mismatch (requires PHP 8.3+)
 - Conflicting package versions in `composer.json`
 
 **Solution:**
@@ -25,7 +25,7 @@ php artisan --version
 
 # 2. Check PHP version
 php -v
-# Expected: PHP 8.1.0 or higher
+# Expected: PHP 8.3.0 or higher
 
 # 3. Update composer.json constraints
 composer require laravolt/laravolt --with-all-dependencies
@@ -69,11 +69,9 @@ php artisan view:clear
 # 2. Verify package installation
 composer show laravolt/laravolt
 
-# 3. Manually register provider (Laravel 10 only, if auto-discovery fails)
-# Add to config/app.php:
-# 'providers' => [
-#     Laravolt\LaravoltServiceProvider::class,
-# ]
+# 3. Re-run package auto-discovery (Laravolt registers its providers this way;
+#    make sure laravolt/laravolt is not listed under extra.laravel.dont-discover)
+php artisan package:discover
 
 # 4. Rebuild caches
 php artisan config:cache

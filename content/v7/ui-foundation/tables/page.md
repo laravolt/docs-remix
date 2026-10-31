@@ -4,7 +4,7 @@ title: Tables and listings
 
 # Tables and listings
 
-Laravolt v7 uses Suitable and generated table classes for searchable, paginated admin listings. {% .lead %}
+Laravolt v8 uses Suitable and generated table classes for searchable, paginated admin listings. {% .lead %}
 
 A table should keep listing logic in one place: query, columns, search, sort, pagination, and row actions. Blade should describe the page structure, not rebuild table behaviour by hand.
 

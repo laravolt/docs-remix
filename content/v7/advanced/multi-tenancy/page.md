@@ -1,6 +1,6 @@
 # Multi-Tenancy Patterns
 
-This guide covers multi-tenant architecture patterns with Laravolt v7, including tenant isolation strategies and implementation examples.
+This guide covers multi-tenant architecture patterns with Laravolt v8, including tenant isolation strategies and implementation examples.
 
 ## Overview
 

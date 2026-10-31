@@ -4,9 +4,9 @@ title: MVP demo validation
 
 # MVP demo validation
 
-The VoltProcure demo validates how Laravolt v7 can be used to share an operational MVP story with stakeholders: a real procurement workflow, multiple roles, protected actions, and visible business state from request to inventory. {% .lead %}
+The VoltProcure demo validates how Laravolt v8 can be used to share an operational MVP story with stakeholders: a real procurement workflow, multiple roles, protected actions, and visible business state from request to inventory. {% .lead %}
 
-Use this page as a capability map when presenting Laravolt v7 as an AI-ready Laravel platform for business applications. The demo proves workflow collaboration and handoff readiness; it does not claim public sharing links, comments, mentions, or realtime co-editing.
+Use this page as a capability map when presenting Laravolt v8 as an AI-ready Laravel platform for business applications. The demo proves workflow collaboration and handoff readiness; it does not claim public sharing links, comments, mentions, or realtime co-editing.
 
 ## What was validated
 
@@ -55,7 +55,7 @@ This is the strongest sharing capability validated by the MVP: work is shared th
 
 ## Capability map
 
-The demo maps to several Laravolt v7 platform capabilities:
+The demo maps to several Laravolt v8 platform capabilities:
 
 | Capability | How VoltProcure demonstrates it |
 | --- | --- |
@@ -66,14 +66,14 @@ The demo maps to several Laravolt v7 platform capabilities:
 | Operational visibility | The dashboard, approval inbox, purchase order pages, inventory balances, and movement history expose shared business state. |
 | Audit evidence | Approval metadata, receiving notes, inventory movements, and performer references make the process reviewable after the fact. |
 
-For stakeholders, this shows that Laravolt v7 can support more than CRUD. It can express a business process with ownership, authorization, state, and evidence.
+For stakeholders, this shows that Laravolt v8 can support more than CRUD. It can express a business process with ownership, authorization, state, and evidence.
 
 ## Sharing the capability
 
 A concise demo narrative:
 
 ```txt
-VoltProcure is a Laravolt v7 MVP for procurement and inventory.
+VoltProcure is a Laravolt v8 MVP for procurement and inventory.
 It starts with a purchase request, routes it to a manager, converts approval into a purchase order,
 tracks receiving, and updates inventory. Each step is protected by role-specific actions and leaves
 visible operational state for the next team.

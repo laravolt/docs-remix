@@ -4,7 +4,7 @@ title: Forms overview
 
 # Forms overview
 
-`PrelineForm` is Laravolt v7's form builder. It renders Preline UI + Tailwind CSS markup, preserves old input, shows validation errors, and integrates with Laravel `FormRequest` validation and Inputmask — all through one fluent API. {% .lead %}
+`PrelineForm` is Laravolt v8's form builder. It renders Preline UI + Tailwind CSS markup, preserves old input, shows validation errors, and integrates with Laravel `FormRequest` validation and Inputmask — all through one fluent API. {% .lead %}
 
 ## Why a form builder
 
@@ -189,7 +189,7 @@ Bound forms pre-fill each field by the field name, fall back to `old()` input wh
 {!! PrelineForm::close() !!}
 ```
 
-This example combines model binding, server-side validation through `StoreProductRequest`, input masking for currency, multipart uploads, and a Preline UI-styled action bar. It compiles conceptually against Laravolt v7 APIs.
+This example combines model binding, server-side validation through `StoreProductRequest`, input masking for currency, multipart uploads, and a Preline UI-styled action bar. It compiles conceptually against Laravolt v8 APIs.
 
 ## Reusable fields
 

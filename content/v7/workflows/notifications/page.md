@@ -4,7 +4,7 @@ title: Notifications
 
 # Notifications
 
-Notifications keep users informed about workflow events, approvals, and system changes. Laravolt v7 uses Laravel's notification system with email, database, and in-app channels. {% .lead %}
+Notifications keep users informed about workflow events, approvals, and system changes. Laravolt v8 uses Laravel's notification system with email, database, and in-app channels. {% .lead %}
 
 ## Notification channels
 

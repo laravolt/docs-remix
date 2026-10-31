@@ -4,10 +4,10 @@ description: Preline UI powered Blade components for building modern interfaces
 nextjs:
   metadata:
     title: UI Components — Preline UI + Tailwind
-    description: Reference for Laravolt 7's Blade components, rebuilt on Preline UI v3 and Tailwind CSS with dark mode support.
+    description: Reference for Laravolt's Blade components, built on Preline UI 5 and Tailwind CSS 4.3 with dark mode support.
 ---
 
-Laravolt 7 ships a complete set of Blade components rebuilt on [Preline UI](https://preline.co) v3 and Tailwind CSS. Every component supports dark mode via Tailwind `dark:` variants.
+Laravolt ships a complete set of Blade components built on [Preline UI](https://preline.co) and Tailwind CSS (Preline 5.0 and Tailwind 4.3 since v8.1; the components were rebuilt on Preline 3 in v7). Every component supports dark mode via Tailwind `dark:` variants.
 
 ---
 
@@ -154,5 +154,5 @@ Icons use Font Awesome 5 through Blade Icons:
 The icon prefix is configured in `config/laravolt/ui.php` (`iconset` key).
 
 {% callout type="warning" title="Coming from v6?" %}
-Fomantic UI classes (`ui button`, `ui grid`, `ui card`, ...) no longer exist in v7. Use Tailwind utilities or the `<x-volt-*>` components above instead.
+Fomantic UI classes (`ui button`, `ui grid`, `ui card`, ...) no longer exist since v7. Use Tailwind utilities or the `<x-volt-*>` components above instead.
 {% /callout %}

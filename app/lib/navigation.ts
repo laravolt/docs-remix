@@ -206,7 +206,9 @@ export const v6Navigation: NavSection[] = [
 export const versions: Version[] = [
   {
     id: 'v7',
-    label: 'v7',
+    // The current docs live in content/v7 and are served from the URL root;
+    // they describe Laravolt 8, which kept the v7 APIs.
+    label: 'v8',
     description: 'Current',
     homeHref: '/',
     pathPrefix: '',

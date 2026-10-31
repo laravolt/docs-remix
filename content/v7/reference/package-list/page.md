@@ -4,7 +4,7 @@ title: Package list
 
 # Package list
 
-Laravolt v7 is a platform made from focused packages. {% .lead %}
+Laravolt v8 is a platform made from focused packages. {% .lead %}
 
 The main `laravolt/laravolt` package wires the service providers, facades, commands, migrations, assets, and configuration together.
 
@@ -45,7 +45,7 @@ The main package registers these aliases:
 | `PrelineForm` | `Laravolt\PrelineForm\Facade` |
 | `Form` | legacy-compatible alias to the PrelineForm facade |
 
-For new v7 form code, prefer the explicit `PrelineForm` alias instead of the legacy-compatible `Form` alias.
+For new form code, prefer the explicit `PrelineForm` alias instead of the legacy-compatible `Form` alias.
 
 ## Service providers
 

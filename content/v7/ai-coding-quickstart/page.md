@@ -4,13 +4,13 @@ title: AI Coding with Laravolt
 
 # AI Coding with Laravolt
 
-Laravolt v7 is designed for AI-assisted development. This quickstart shows AI agents and developers how to bootstrap a working admin module, verify it works, and customize it for production. {% .lead %}
+Laravolt v8 is designed for AI-assisted development. This quickstart shows AI agents and developers how to bootstrap a working admin module, verify it works, and customize it for production. {% .lead %}
 
 ## Prerequisites
 
 Before starting, ensure:
 
-- Laravel 11+ project with Laravolt v7 installed
+- Laravel 12 or 13 project with Laravolt v8 installed
 - Database configured and migrated
 - `php artisan serve` running
 - Access to `/llms.txt` and `/llms-full.txt` for context
@@ -133,7 +133,7 @@ Click "New product" to test the create form.
 When prompting an AI agent, include the documentation context:
 
 ```txt
-Read /llms.txt to understand Laravolt v7 conventions.
+Read /llms.txt to understand Laravolt v8 conventions.
 
 Task: Add a "category" field to the Product module.
 - Add migration for products.category_id foreign key
@@ -150,7 +150,7 @@ The agent can fetch `/llms-full.txt` for complete API reference or use the "Copy
 ### Generate a new CRUD module
 
 ```txt
-Generate a Laravolt v7 CRUD module for "PurchaseOrder" table.
+Generate a Laravolt v8 CRUD module for "PurchaseOrder" table.
 
 Steps:
 1. Create migration with fields: order_number (string, unique), vendor_name (string), total_amount (decimal), status (enum: draft/submitted/approved/rejected), notes (text, nullable)

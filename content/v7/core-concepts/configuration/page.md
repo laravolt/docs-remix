@@ -4,7 +4,7 @@ title: Configuration
 
 # Configuration
 
-Laravolt v7 keeps platform behaviour in Laravel configuration files so applications can change defaults without patching package code. {% .lead %}
+Laravolt v8 keeps platform behaviour in Laravel configuration files so applications can change defaults without patching package code. {% .lead %}
 
 Configuration is one of the main AI-ready extension points: it is explicit, searchable, reviewable, and easy to diff in pull requests.
 
@@ -56,6 +56,10 @@ Menus can be registered from code or configuration. Config-driven menus are usef
 
 Keep permission metadata close to each menu item. The route/controller must still enforce authorization.
 
+Each file in `config/laravolt/menu/` is one menu group. The built-in **System** group (Users, Roles, Permissions, Settings) comes from the package. If you publish it to `config/laravolt/menu/system.php`, your copy **replaces** the package's group, so entries you delete disappear from the menu. Add your own groups as separate files instead. To remove the System group entirely, set `laravolt.platform.features.enable_default_menu` to `false`.
+
+Since v8.1 the menu is built when it is read (`app('laravolt.menu.sidebar')->allMenu()`), not when the default sidebar view renders, so it also works in layouts that replace `laravolt::menu.sidebar`.
+
 ## Model configuration
 
 Some Laravolt modules resolve models through config. For example, platform commands use configured Epicentrum user and role models when creating admin users or syncing permissions.
@@ -89,7 +93,7 @@ This order keeps upgrades manageable and makes AI-assisted edits less risky.
 A useful prompt for agents:
 
 ```txt
-Update Laravolt v7 configuration for a procurement module.
+Update Laravolt v8 configuration for a procurement module.
 Register menu entries with permission metadata.
 Do not change package source.
 Return config files changed and explain each new key.

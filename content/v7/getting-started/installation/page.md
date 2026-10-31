@@ -4,19 +4,19 @@ title: Installation
 
 # Installation
 
-Install Laravolt v7 into a Laravel application, publish the platform assets, run migrations, and create the first administrator account. {% .lead %}
+Install Laravolt v8 into a Laravel application, publish the platform assets, run migrations, and create the first administrator account. {% .lead %}
 
 ## Requirements
 
-Laravolt v7 targets the current Laravel and Livewire generation.
+Laravolt v8 targets the current Laravel and Livewire generation.
 
 | Dependency | Version |
 | --- | --- |
-| PHP | `>= 8.2` |
-| Laravel framework components | `^11.0`, `^12.0`, or `^13.0` |
-| Livewire | `^4.0` |
-| Preline UI assets | `4.1.2` in the current platform asset directives |
-| Tailwind CSS | v4 syntax in the current skeleton (`@import "tailwindcss"`) |
+| PHP | `^8.3` (8.3, 8.4, 8.5) |
+| Laravel framework components | `^12.68` or `^13.29` (these floors exclude versions affected by CVE-2026-114509) |
+| Livewire | `^4.4` |
+| Preline UI | `5.0.0`, bundled in the platform assets |
+| Tailwind CSS | `4.3.3` for the bundled CSS; v4 syntax in the skeleton (`@import "tailwindcss"`) |
 | Database | Any database supported by Laravel migrations |
 
 Laravolt also relies on common PHP extensions: `bcmath`, `ctype`, `curl`, `gd`, `json`, `mbstring`, `openssl`, `pdo`, and `xml`.
@@ -26,8 +26,10 @@ Laravolt also relies on common PHP extensions: `bcmath`, `ctype`, `curl`, `gd`, 
 Add Laravolt to a fresh or existing Laravel application:
 
 ```bash
-composer require laravolt/laravolt
+composer require laravolt/laravolt:^8.1
 ```
+
+For a new project, the [starter kit](https://github.com/laravolt/laravel-starter-kit) v1.8+ already includes it: `composer create-project laravolt/laravel-starter-kit my-app`.
 
 Laravolt is split into small packages under the `laravolt/*` namespace (for example `laravolt/preline-form`, `laravolt/suitable`, `laravolt/auto-crud`). The main metapackage wires the service providers, migrations, and configuration together.
 
@@ -63,7 +65,7 @@ The command asks for name, email, and password when they are not provided. It al
 
 ## Build frontend assets
 
-Laravolt v7 uses Preline UI and Tailwind CSS for its UI foundation. Install frontend dependencies with the package manager your project uses:
+Laravolt v8 uses Preline UI and Tailwind CSS for its UI foundation. Install frontend dependencies with the package manager your project uses:
 
 ```bash
 # npm
@@ -128,5 +130,5 @@ If a step fails, check [Artisan commands](/reference/artisan-commands) for comma
 
 ## What to read next
 
-- [AI-ready platform](/core-concepts/ai-ready-platform) — the mental model for structuring v7 projects so teams and coding agents can extend them safely.
+- [AI-ready platform](/core-concepts/ai-ready-platform) — the mental model for structuring Laravolt projects so teams and coding agents can extend them safely.
 - [Forms overview](/forms/overview) — how `PrelineForm` turns Laravel validation and Preline UI into a single form API.

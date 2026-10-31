@@ -4,9 +4,9 @@ title: Business actions
 
 # Business actions
 
-Most Laravolt v7 admin modules start as plain CRUD: a table, a create form, an edit form, a delete button. Real systems quickly grow operations that are **not** create/update/delete on a single row — _submit_, _approve_, _reject_, _issue_, _receive_, _cancel_, _resend_, _retry_. Treat these as **business actions** with their own files, routes, policies, and tests. {% .lead %}
+Most Laravolt v8 admin modules start as plain CRUD: a table, a create form, an edit form, a delete button. Real systems quickly grow operations that are **not** create/update/delete on a single row — _submit_, _approve_, _reject_, _issue_, _receive_, _cancel_, _resend_, _retry_. Treat these as **business actions** with their own files, routes, policies, and tests. {% .lead %}
 
-This page documents the v7 convention for non-CRUD operations on top of generated Thunderclap modules. The full workflow engine (Camunda + `WorkflowService`) is a separate, post-stable integration; this page covers the lightweight pattern that ships with v7 stable.
+This page documents the Laravolt convention for non-CRUD operations on top of generated Thunderclap modules. The full workflow engine (Camunda + `WorkflowService`) is a separate, post-stable integration; this page covers the lightweight pattern that ships with v7 stable.
 
 ## When to use what
 
@@ -244,7 +244,7 @@ Move from action classes to `WorkflowService` / Camunda when:
 - Long-running state must survive deployments and be observable from a dashboard outside Laravel.
 - Audit history and SLA timers are first-class requirements.
 
-Until then, **action classes + model status + policy** is the recommended v7 stable pattern. Defer the workflow engine to a later phase rather than ship half-integrated.
+Until then, **action classes + model status + policy** is the recommended stable pattern. Defer the workflow engine to a later phase rather than ship half-integrated.
 
 ## What to read next
 

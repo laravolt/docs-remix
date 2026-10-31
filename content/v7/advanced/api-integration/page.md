@@ -1,6 +1,6 @@
 # API Integration Patterns
 
-This guide covers RESTful API patterns with Laravolt v7, including authentication, resources, and exposing Thunderclap-generated CRUD as APIs.
+This guide covers RESTful API patterns with Laravolt v8, including authentication, resources, and exposing Thunderclap-generated CRUD as APIs.
 
 ## Overview
 
