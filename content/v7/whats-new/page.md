@@ -1,11 +1,23 @@
 ---
 title: What's New
-description: Laravolt 8 and 8.1 — supported versions, Preline 5, Octane-safe menus — and the Laravolt 7 overhaul
+description: Laravolt 8.0 to 8.2 — supported versions, Preline 5, Octane-safe menus — and the Laravolt 7 overhaul
 nextjs:
   metadata:
     title: What's New in Laravolt 8
     description: Laravolt 8 requires PHP 8.3+ and Laravel 12.68+/13.29+, ships Preline 5 and Tailwind 4.3 in 8.1, and makes the sidebar safe for Octane and persistent caches.
 ---
+
+## Laravolt 8.2
+
+- **8.2.1 is a security release. Upgrade now.** Before 8.2.1, the media endpoints deleted any media record by id without checking who asked, even for visitors who were not logged in. Now a user may delete only media they own, and anything else needs your app's `delete` ability for the media model. Laravolt 7 is no longer maintained and will not get this fix, so upgrade to `laravolt/laravolt:^8.2.1`. [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.2.1).
+- **`<x-volt-media-preview>`** shows an uploaded file with the browser's native viewer: images, PDF, video and audio. Other files get a download link.
+
+```blade
+<x-volt-media-preview :media="$post->getFirstMedia('attachments')" />
+<x-volt-media-preview src="/storage/report.pdf" height="800px" />
+```
+
+- Guest uploads work again, and validation errors on the client-upload endpoints return 422 instead of 500.
 
 ## Laravolt 8.1
 
