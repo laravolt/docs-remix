@@ -29,9 +29,9 @@ A department asks for goods, and its manager approves them line by line. Procure
 - **One design layer over every page.** A small Tailwind CSS file remaps Laravolt's `gray-*` and `blue-*` scales to graphite neutrals and one indigo accent. Laravolt's built-in user and role screens follow, without overriding a single vendor view.
 - **Rules in actions, covered by tests.** Only the department's manager decides, nothing is ordered before approval, and a receipt never exceeds what is outstanding.
 - **Production on Octane + FrankenPHP.** The Docker image runs worker mode. On a shared 2-vCPU host the dashboard served about 50 requests per second, against about 15 on `php artisan serve`. See [Laravolt under Octane](/reference/performance#laravolt-under-octane).
-- **Works on a phone.** Every page is usable at 390px wide.
+- **Works on a phone.** Every page is usable at 390px wide. Below 568px, list tables become labelled cards through Laravolt's built-in Basictable: each one only adds the `basictable` class. See [Tables on phones](/ui-foundation/tables#tables-on-phones).
 
-![The dashboard on a phone](/images/voltprocure/dashboard-phone.png)
+![VoltProcure at 390px: the dashboard, purchase orders as cards with status badges, and stock cards with reorder-point bars](/images/voltprocure/phone.png)
 
 ## Run it
 

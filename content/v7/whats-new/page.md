@@ -18,6 +18,13 @@ nextjs:
 ```
 
 - Guest uploads work again, and validation errors on the client-upload endpoints return 422 instead of 500.
+- **Tables on phones (8.2.2–8.2.4).**
+  - Cards follow the app's light or dark theme.
+  - Badges and coloured values keep their colours.
+  - Values line up across rows.
+  - `@basictable*` directives accept an options array.
+
+  See [Tables on phones](/ui-foundation/tables#tables-on-phones). In a `local` environment that already has `public/laravolt`, run `php artisan laravolt:extract-assets` once to get the new CSS.
 
 ## Laravolt 8.1
 
