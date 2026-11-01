@@ -55,15 +55,16 @@ php artisan laravolt:admin Administrator admin@laravolt.dev secret
 
 ### Using Docker Compose (Alternative)
 
-For a complete development environment with Redis and email testing, create a `docker-compose.yml` file in your project root:
+For a complete development environment with Redis and email testing, create a `docker-compose.yml` file in your project root. [`laravoltdev/image:php8.5-dev`](https://github.com/laravolt/image) is a ready-made image: PHP 8.5 with Laravolt's extensions, FrankenPHP, Bun and Xdebug (off by default). It is pulled, so nothing is built on your machine, and it runs natively on Apple Silicon.
 
 ```yaml
 services:
   php:
-    image: laravoltdev/image:php8.2-base
+    image: laravoltdev/image:php8.5-dev
     restart: always
     ports:
-      - 8080:8080
+      - 8080:8080 # app
+      - 5173:5173 # Vite: run `bun run dev` inside the container
     volumes:
       - .:/var/www/html
 
@@ -86,7 +87,12 @@ Start the development environment:
 
 ```bash
 docker compose up -d
+docker compose exec php composer install
+docker compose exec php bun install
+docker compose exec php bun run dev
 ```
+
+For production, build your app on `laravoltdev/image:php8.5-prod-v2.0.0`. Pin the versioned tag. The [laravel-starter-kit](https://github.com/laravolt/laravel-starter-kit/blob/main/docker/frankenphp/prod.Dockerfile) includes a production Dockerfile.
 
 Access points:
 - **Main application**: http://localhost:8080
