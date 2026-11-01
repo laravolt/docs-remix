@@ -92,7 +92,7 @@ docker compose exec php bun install
 docker compose exec php bun run dev
 ```
 
-For production, build your app on `laravoltdev/image:php8.5-prod-v2.0.0`. Pin the versioned tag. The [laravel-starter-kit](https://github.com/laravolt/laravel-starter-kit/blob/main/docker/frankenphp/prod.Dockerfile) includes a production Dockerfile.
+For production, build your app on `laravoltdev/image:php8.5-prod-v2.1.0`. Pin the versioned tag. The [laravel-starter-kit](https://github.com/laravolt/laravel-starter-kit/blob/main/docker/frankenphp/prod.Dockerfile) includes a production Dockerfile.
 
 Access points:
 - **Main application**: http://localhost:8080
