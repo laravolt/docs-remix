@@ -104,6 +104,66 @@ A practical pattern:
 
 This gives reviewers one obvious place to inspect list behaviour.
 
+## Tables on phones
+
+Below 568px wide, Laravolt shows a table as a stack of cards. Each row becomes a card, and each cell is labelled with its column heading. This uses [Basictable](https://github.com/jerrylow/basictable), which ships with Laravolt and is loaded by `@laravoltStyles` and `@laravoltScripts`.
+
+![Purchase orders and stock in VoltProcure at 390px wide, each row shown as a card](/images/voltprocure/tables-phone.png)
+
+Generated table classes (`make:table`, rendered by `Laravolt\Ui\TableView`) get this automatically. For a table you write yourself inside `<x-volt-app>`, add the `basictable` class. The base layout already runs `@basictableInline('.basictable')`:
+
+```blade
+<table class="basictable w-full text-left text-sm">
+    <thead>
+        <tr>
+            <th>SKU</th>
+            <th>Item</th>
+            <th class="hidden md:table-cell">Category</th>
+            <th><span class="sr-only">Reorder point</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{-- one <tr> per record --}}
+    </tbody>
+</table>
+```
+
+- **Every column needs a heading.** The card labels come from the `<th>` text. For a column without a visible heading, such as a progress bar, put the label in a `sr-only` span.
+- **Columns hidden on small screens come back in the card.** A cell with `hidden md:table-cell` is shown on a phone, because the card has room for it.
+- **Undo sizes meant for the wide table.** Cells with `w-40`, `max-w-64` or `truncate` stay narrow inside a card. Reset them in your CSS:
+
+```css
+.bt-wrapper table.bt tbody td {
+    width: auto;
+    max-width: none;
+    white-space: normal;
+}
+```
+
+- **Colours and theme carry over.** Badges and coloured values keep their colours, and the cards follow the app's light or dark theme (Laravolt 8.2.2 and later).
+
+### Other card styles
+
+To give a table another card style, use a different class and call the directive yourself, after the table. The `.basictable` class already gets the inline style from the base layout.
+
+| Directive | Card style |
+| --- | --- |
+| `@basictableInline('.selector')` | Label beside the value (the layout default) |
+| `@basictableResponsive('.selector')` | Label above the value |
+| `@basictableCompact('.selector')` | Label above the value, with less padding |
+| `@basictableScrollable('.selector', '300px')` | Cards in a box that scrolls past the given height |
+| `@basictable('.selector')` | Basictable's own defaults |
+
+Each directive takes an options array as its last argument, merged over its defaults. Arguments can be variables:
+
+```blade
+@push('script')
+    @basictableResponsive('.stock-table', ['breakpoint' => 768])
+@endpush
+```
+
+Options include `breakpoint` (in pixels, default 568), `containerBreakpoint`, `tableWrap`, `showEmptyCells` and `header`. Options work from Laravolt 8.2.4.
+
 ## Row actions
 
 Row actions should use named routes and policy checks:
