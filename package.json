@@ -19,7 +19,7 @@
     "@markdoc/markdoc": "^0.5.10",
     "js-yaml": "^4.1.0",
     "prismjs": "1.30.0",
-    "remix": "^3.0.0-beta.5"
+    "remix": "^3.0.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.3",
