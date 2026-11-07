@@ -28,7 +28,7 @@
     "@types/prismjs": "1.26.6",
     "tailwindcss": "4.3.3",
     "typescript": "latest",
-    "wrangler": "4.151.1"
+    "wrangler": "4.152.0"
   },
   "overrides": {
     "undici": "7.30.1"
