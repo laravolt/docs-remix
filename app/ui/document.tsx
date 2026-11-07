@@ -1,7 +1,8 @@
-import type { Handle, RemixNode } from 'remix/ui'
-import { css } from 'remix/ui'
+import type { Handle, RemixNode } from 'remix/component'
+import { css } from 'remix/component'
+import { ImportMap } from 'remix/component/server'
 
-import { routes } from '../routes.ts'
+import { scriptEntry } from '../assets.ts'
 
 export interface DocumentProps {
   children?: RemixNode
@@ -39,13 +40,17 @@ export function Document(handle: Handle<DocumentProps>) {
           <meta name="twitter:image" content="/images/logo.png" />
           <meta name="twitter:image:alt" content="Laravolt" />
           <script>{`(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d)}catch(e){}})()`}</script>
+          <ImportMap value={scriptEntry.importMap} />
+          {scriptEntry.preloads.map((href) => (
+            <link key={href} rel="modulepreload" href={href} />
+          ))}
         </head>
         <body
           mix={css({ margin: 0 })}
           className="flex min-h-full bg-white antialiased dark:bg-slate-900"
         >
           {children}
-          <script type="module" src={routes.assets.href({ path: 'app/assets/entry.ts' })}></script>
+          <script type="module" src={scriptEntry.href}></script>
         </body>
       </html>
     )

@@ -1,4 +1,5 @@
-import type { Handle } from 'remix/ui'
+import type { Handle } from 'remix/component'
+import { unsafeHTML } from 'remix/component'
 
 import { highlight } from '../lib/highlight.ts'
 
@@ -58,7 +59,7 @@ export function Fence(handle: Handle<{ content?: string; language?: string; chil
           {highlighted === null ? (
             <code className={`language-${language}`}>{code}</code>
           ) : (
-            <code className={`language-${language}`} innerHTML={highlighted} />
+            <code className={`language-${language}`} innerHTML={unsafeHTML(highlighted)} />
           )}
         </pre>
       </div>

@@ -1,4 +1,4 @@
-import type { Handle } from 'remix/ui'
+import type { Handle } from 'remix/component'
 
 /**
  * Simplified icon set replacing the template's gradient-heavy SVG icons.

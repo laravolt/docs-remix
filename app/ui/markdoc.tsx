@@ -2,8 +2,8 @@ import Markdoc, { type RenderableTreeNode } from '@markdoc/markdoc'
 
 // @markdoc/markdoc ships CJS; named runtime exports are not visible to Node ESM.
 const { Tag } = Markdoc
-import { createElement } from 'remix/ui'
-import type { RemixNode } from 'remix/ui'
+import { createElement } from 'remix/component'
+import type { RemixNode } from 'remix/component'
 
 import { Callout } from './callout.tsx'
 import { Fence } from './fence.tsx'
