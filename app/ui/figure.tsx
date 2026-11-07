@@ -1,4 +1,4 @@
-import type { Handle } from 'remix/ui'
+import type { Handle } from 'remix/component'
 
 export function Figure(handle: Handle<{ src?: string; alt?: string; caption?: string }>) {
   return () => {

@@ -1,4 +1,4 @@
-import type { Handle, RemixNode } from 'remix/ui'
+import type { Handle, RemixNode } from 'remix/component'
 
 import { getVersionForPath, versions } from '../lib/navigation.ts'
 import { Hero } from './hero.tsx'

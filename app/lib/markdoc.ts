@@ -5,7 +5,7 @@ import Markdoc, { type Config, type RenderableTreeNode } from '@markdoc/markdoc'
 
 // @markdoc/markdoc ships CJS; named runtime exports are not visible to Node ESM.
 const { Tag } = Markdoc
-import yaml from 'js-yaml'
+import { load as loadYaml } from 'js-yaml'
 
 import { collectSections, type Section } from './sections.ts'
 import { slugifyWithCounter } from './slugify.ts'
@@ -125,7 +125,7 @@ export function renderPageFile(file: string): RenderedPage {
 
   let frontmatter: PageFrontmatter = {}
   if (ast.attributes.frontmatter) {
-    let parsed = yaml.load(ast.attributes.frontmatter)
+    let parsed = loadYaml(ast.attributes.frontmatter)
     if (parsed && typeof parsed === 'object') {
       frontmatter = parsed as PageFrontmatter
     }
@@ -152,7 +152,7 @@ export function readPageFrontmatter(file: string): PageFrontmatter {
   let source = fs.readFileSync(file, 'utf8')
   let ast = Markdoc.parse(source)
   if (ast.attributes.frontmatter) {
-    let parsed = yaml.load(ast.attributes.frontmatter)
+    let parsed = loadYaml(ast.attributes.frontmatter)
     if (parsed && typeof parsed === 'object') return parsed as PageFrontmatter
   }
   return {}

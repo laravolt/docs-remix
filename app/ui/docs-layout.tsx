@@ -1,4 +1,4 @@
-import type { Handle, RemixNode } from 'remix/ui'
+import type { Handle, RemixNode } from 'remix/component'
 
 import { markdownMirrorPath } from '../lib/llms.ts'
 import { getVersionForPath } from '../lib/navigation.ts'
