@@ -1,11 +1,27 @@
 ---
 title: What's New
-description: Laravolt 8.0 to 8.2 — supported versions, Preline 5, Octane-safe menus — and the Laravolt 7 overhaul
+description: Laravolt 8.0 to 8.3 — supported versions, Preline 5, Octane-safe menus, FilePond uploads, tighter access checks — and the Laravolt 7 overhaul
 nextjs:
   metadata:
     title: What's New in Laravolt 8
     description: Laravolt 8 requires PHP 8.3+ and Laravel 12.68+/13.29+, ships Preline 5 and Tailwind 4.3 in 8.1, and makes the sidebar safe for Octane and persistent caches.
 ---
+
+## Laravolt 8.3
+
+- **8.3.3 tightens access checks. Upgrade, and read the steps below.** [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.3.3).
+  - The Settings pages require the `laravolt::manage-settings` permission, as the menu entry already did. Users holding `*` keep access.
+  - Workflow instance pages and `media::stream` require sign-in. The embedded form, the public tracker and the definition XML stay public.
+  - Workflow tasks are accepted only for the module's own process. Guests may submit only unassigned tasks listed in the module's `tracker_tasks`; signed-in users may submit unassigned tasks and tasks assigned to them.
+  - Every multipart step of a direct S3/R2 upload uses the upload token, and `client-upload.security.require_auth` now returns 401 to guests.
+  - Dropdown search (`dropdownDB()->ajax()`) passes the search term as a bound parameter. Templates must use `%s`.
+- **Upgrading to 8.3.3:**
+  1. `composer require laravolt/laravolt:^8.3.3`
+  2. Grant `laravolt::manage-settings` to roles that edit settings and do not hold `*`.
+  3. If the app published `public/js/components/client-side-uploader.js`, publish it again: `php artisan vendor:publish --tag=laravolt-media-assets --force`.
+  4. Rewrite any dropdown `query` template that uses a conversion other than `%s`.
+- **File uploads use FilePond (8.3.0–8.3.2).** `form()->uploader()` is a FilePond field with drag and drop, progress, previews and checks before upload, and `form()->filepond()` loads the FilePond shipped with Laravolt. See [File uploads](/forms/uploader). The proprietary Fileuploader and the pre-v8 jQuery bundles that carried it are gone from `assets.zip`.
+- **Faster pages (8.3.1).** Permission checks, the sidebar and the topbar do less work per request: VoltProcure pages are 1.17x to 1.36x faster.
 
 ## Laravolt 8.2
 

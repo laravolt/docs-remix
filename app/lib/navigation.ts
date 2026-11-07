@@ -54,6 +54,7 @@ export const v7Navigation: NavSection[] = [
       { title: 'Overview', href: '/forms/overview' },
       { title: 'Validation', href: '/forms/validation' },
       { title: 'Input masking', href: '/forms/input-masking' },
+      { title: 'File uploads', href: '/forms/uploader' },
       { title: 'Custom fields', href: '/forms/custom-fields' },
       { title: 'Layouts', href: '/forms/layouts' },
     ],
