@@ -436,4 +436,3 @@ If charts are slow to render:
 
 - [Statistics](/v6/statistics) - For displaying single-value metrics
 - [Tables](/v6/table) - For displaying tabular data
-- [Dashboard Layouts](/v6/layout) - For arranging multiple visualization components

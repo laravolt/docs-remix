@@ -16,7 +16,7 @@ function renderDocsPage(context: any, pathname: string) {
   let { frontmatter, content, tableOfContents } = renderPageFile(file)
 
   return context.render(
-    <Document title={frontmatter.title} description={frontmatter.description}>
+    <Document title={frontmatter.title} description={frontmatter.description} pathname={pathname}>
       <Layout pathname={pathname}>
         <DocsLayout pathname={pathname} title={frontmatter.title} tableOfContents={tableOfContents}>
           {renderMarkdoc(content)}

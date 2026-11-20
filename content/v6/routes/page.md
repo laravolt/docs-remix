@@ -195,7 +195,7 @@ If your application behaves differently after running `php artisan route:cache`:
 
 ## Related Documentation
 
-- [Laravel Routing](/v6/basics)
+- [Laravel Routing](https://laravel.com/docs/routing)
 - [Controller Organization](/v6/controller)
-- [Middleware](/v6/middleware)
-- [Authentication](/v6/authentication)
+- [Middleware](https://laravel.com/docs/middleware)
+- [Authentication](https://laravel.com/docs/authentication)

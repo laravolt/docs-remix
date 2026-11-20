@@ -357,4 +357,3 @@ If icons aren't showing up:
 
 - [Charts](/v6/charts) - For displaying more complex data visualizations
 - [Tables](/v6/table) - For displaying tabular data
-- [Dashboard Layouts](/v6/layout) - For arranging multiple statistics components

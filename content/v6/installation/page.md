@@ -220,6 +220,6 @@ Congratulations, you've successfully installed and launched Laravolt!
 
 Now that you have Laravolt installed, you might want to explore:
 
-1. [UI Components](/docs/form) - Learn about Laravolt's form, table, and other UI components
-2. [Workflow](/docs/workflow) - Integrate complex business processes with Camunda
-3. [Access Control](/docs/acl) - Set up roles and permissions for your application
+1. [UI Components](/v6/form) - Learn about Laravolt's form, table, and other UI components
+2. [Workflow](/v6/workflow) - Integrate complex business processes with Camunda
+3. [Access Control](/v6/acl) - Set up roles and permissions for your application

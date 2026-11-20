@@ -19,6 +19,7 @@ export const v7Navigation: NavSection[] = [
     links: [
       { title: 'Home', href: '/' },
       { title: 'Introduction', href: '/introduction' },
+      { title: "What's new", href: '/whats-new' },
     ],
   },
   {
