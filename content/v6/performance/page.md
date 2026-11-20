@@ -290,5 +290,5 @@ return User::paginate(25);
 ## Related Documentation
 
 - [Laravel Optimization Documentation](https://laravel.com/docs/deployment#optimization)
-- [Database Indexing](/v6/database-optimization)
-- [Server Configuration](/v6/server-configuration)
+- [Database Indexing](https://laravel.com/docs/migrations#indexes)
+- [Server Configuration](https://laravel.com/docs/deployment#server-requirements)

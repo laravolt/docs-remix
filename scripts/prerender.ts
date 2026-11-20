@@ -8,8 +8,9 @@
  *    legacy versions keep their `/v6/...` prefix).
  * 3. Fetch each HTML page + its `.md` mirror + `llms.txt` / `llms-full.txt`.
  * 4. Download every `/assets/*` file referenced by the rendered HTML.
- * 5. Copy `public/` into `dist/` and emit `_redirects` for old `/v7/*` URLs and
- *    `_headers` so `.ts` modules are served as JavaScript.
+ * 5. Copy `public/` into `dist/` and emit `sitemap.xml`, `robots.txt`,
+ *    `_redirects` for old `/v7/*` URLs and `_headers` so `.ts` modules are
+ *    served as JavaScript.
  */
 import { spawn } from 'node:child_process'
 import * as fs from 'node:fs'
@@ -20,6 +21,7 @@ const contentDir = path.join(root, 'content')
 const distDir = path.join(root, 'dist')
 const port = 44199
 const base = `http://localhost:${port}`
+const siteUrl = 'https://laravolt.dev'
 
 function collectRoutes(): string[] {
   const routes: string[] = ['/']
@@ -125,6 +127,20 @@ async function main() {
     }
 
     copyDir(path.join(root, 'public'), distDir)
+
+    // Every prerendered page, at the URL it is served from (no trailing slash,
+    // see html_handling in wrangler.jsonc) and that its canonical tag names.
+    writeFile(
+      'sitemap.xml',
+      [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        ...routes.map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`),
+        '</urlset>',
+        '',
+      ].join('\n'),
+    )
+    writeFile('robots.txt', ['User-agent: *', 'Allow: /', '', `Sitemap: ${siteUrl}/sitemap.xml`, ''].join('\n'))
 
     // Old /v7-prefixed URLs permanently redirect to the root equivalents.
     writeFile('_redirects', ['/v7 / 301', '/v7/* /:splat 301', ''].join('\n'))

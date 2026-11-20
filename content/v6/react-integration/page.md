@@ -371,6 +371,6 @@ class ErrorBoundary extends React.Component {
 
 ## Related Documentation
 
-- [Laravel Mix Configuration](/v6/frontend-assets)
-- [API Development](/v6/api-development)
-- [Authentication Guide](/v6/authentication)
+- [Laravel Mix Configuration](https://laravel-mix.com/docs)
+- [API Authentication with Sanctum](https://laravel.com/docs/sanctum)
+- [Authentication Guide](https://laravel.com/docs/authentication)

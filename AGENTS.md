@@ -105,8 +105,10 @@ npm run deploy     # or: npm run build && wrangler deploy
 ```
 
 `dist/` is generated and gitignored — never edit it by hand. `wrangler.jsonc` points
-at `./dist` with `html_handling: auto-trailing-slash` (so `/x` 307s to `/x/` — normal,
-not a bug) and `not_found_handling: 404-page`.
+at `./dist` with `html_handling: drop-trailing-slash` (pages are served at `/x`, the
+URL internal links, canonical tags and `sitemap.xml` use; `/x/` redirects to `/x`),
+`not_found_handling: 404-page`, and `workers_dev: false` so the site is only served
+on laravolt.dev.
 
 Verify a deploy — **the CDN will lie to you**, a path you visited recently keeps
 serving the old HTML:
@@ -134,8 +136,6 @@ debugging config.
   table on `/getting-started/installation`). Markdoc pipeline bug, pre-existing.
 - `public/images/blur-cyan.png` and `blur-indigo.png` (~430 KB) are unreferenced
   leftovers from the template's palette.
-- The preview URL `laravolt-docs.personal-project.workers.dev` still serves the site
-  and should be redirected to `laravolt.dev` to avoid duplicate content.
 
 ## References
 
