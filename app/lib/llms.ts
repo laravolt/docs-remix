@@ -54,7 +54,7 @@ export function buildLlmsTxt(): string {
   let lines: string[] = [
     '# Laravolt',
     '',
-    '> Laravolt is a digital empowerment platform designed to accelerate Laravel application development. This index lists every documentation page; append `.md` to any page URL to fetch its raw Markdoc source.',
+    '> Laravolt v8 is an AI-ready Laravel application platform for business systems: Thunderclap scaffolding, admin UI, forms, tables, access control and workflows. This index lists every documentation page; append `.md` to any page URL to fetch its raw Markdoc source.',
     '',
   ]
 
