@@ -16,6 +16,8 @@ import { spawn } from 'node:child_process'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 
+import { movedPageRedirects } from '../app/lib/redirects.ts'
+
 const root = path.dirname(import.meta.dirname)
 const contentDir = path.join(root, 'content')
 const distDir = path.join(root, 'dist')
@@ -143,7 +145,8 @@ async function main() {
     writeFile('robots.txt', ['User-agent: *', 'Allow: /', '', `Sitemap: ${siteUrl}/sitemap.xml`, ''].join('\n'))
 
     // Old /v7-prefixed URLs permanently redirect to the root equivalents.
-    writeFile('_redirects', ['/v7 / 301', '/v7/* /:splat 301', ''].join('\n'))
+    // Pages merged into another page keep their old URL (app/lib/redirects.ts).
+    writeFile('_redirects', ['/v7 / 301', '/v7/* /:splat 301', ...movedPageRedirects(), ''].join('\n'))
 
     // Modules keep their source extension (.ts). Cloudflare would serve those
     // as video/mp2t, and browsers refuse to run a module with that MIME type.

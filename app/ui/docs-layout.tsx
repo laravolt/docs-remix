@@ -51,6 +51,18 @@ function DocsHeader(handle: Handle<{ pathname: string; title?: string }>) {
 
     return (
       <header className="mb-9 space-y-1">
+        {activeVersion.id === 'v6' ? (
+          <p
+            role="note"
+            className="mb-6 rounded-lg bg-brand-50 px-4 py-3 text-sm text-brand-900 ring-1 ring-brand-200 ring-inset dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700"
+          >
+            You are reading the Laravolt v6 documentation. Laravolt v8 is the current version:{' '}
+            <a href="/introduction" className="font-semibold underline underline-offset-2">
+              read the v8 docs
+            </a>
+            .
+          </p>
+        ) : null}
         {section ? (
           <p className="font-display text-sm font-medium text-brand-600 dark:text-brand-400">{section.title}</p>
         ) : null}

@@ -180,6 +180,35 @@ Before keeping a Thunderclap scaffold, check:
 
 Thunderclap is most useful when it removes repetitive typing without hiding responsibility. The final module should still read like ordinary Laravel and Laravolt code.
 
+## Register the module namespace
+
+Generated modules live under the `Modules` namespace. Add it to PSR-4 autoloading in `composer.json`:
+
+```json
+"autoload": {
+    "psr-4": {
+        "App\\": "app/",
+        "Modules\\": "modules/"
+    }
+}
+```
+
+Then run `composer dump-autoload`.
+
+## Customize the stub templates
+
+Publish the stubs when your project has its own conventions:
+
+```bash
+php artisan vendor:publish --tag=thunderclap-stubs
+```
+
+Point `--template` at the customized set. Generated code follows your stubs and keeps the Laravolt conventions (FormRequest, permission gate) unless you remove them from the stubs.
+
+{% callout type="note" title="Bringing modules from a v6 application?" %}
+Modular Thunderclap modules can be moved into a fresh v8 base application one by one. After moving a module, align it with Laravolt conventions: add `Requests/Store.php` and `Requests/Update.php`, update its views to Preline/Tailwind, and grant the `modules.<module-name>.view` permission.
+{% /callout %}
+
 ## What to read next
 
 - [Admin workflows](/admin-workflows/overview) — structure generated resources into business operations.

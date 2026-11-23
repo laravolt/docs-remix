@@ -63,6 +63,7 @@ export const v7Navigation: NavSection[] = [
   {
     title: 'UI components',
     links: [
+      { title: 'Overview', href: '/ui-components' },
       { title: 'Buttons', href: '/ui-components/buttons' },
       { title: 'Cards', href: '/ui-components/cards' },
       { title: 'Modals', href: '/ui-components/modals' },
