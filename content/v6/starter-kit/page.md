@@ -138,6 +138,4 @@ If you encounter problems during database migration:
 ## Related Components/Features
 
 - [Installation Guide](/v6/installation) - Complete setup instructions
-- [Authentication](/v6/authentication) - Detailed documentation on authentication features
-- [User Management](/v6/user-management) - Working with user data and permissions
-- [Frontend Assets](/v6/frontend-assets) - Managing CSS and JavaScript resources
+- [Access Control](/v6/acl) - Working with users, roles and permissions

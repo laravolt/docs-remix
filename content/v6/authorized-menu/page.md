@@ -129,6 +129,4 @@ After defining permissions, administrators can assign them to roles through the 
 
 ## Related Features
 
-- [ACL System](/v6/acl) - Learn more about Laravolt's Access Control List system
-- [User Management](/v6/users) - Managing users in your application
-- [Role Management](/v6/roles) - Working with user roles
+- [ACL System](/v6/acl) - Learn more about Laravolt's Access Control List system, including users and roles

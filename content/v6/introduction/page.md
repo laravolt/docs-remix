@@ -73,4 +73,4 @@ Laravolt thrives through community contributions and collaboration. Join us:
 
 - [GitHub Repository](https://github.com/laravolt/laravolt)
 - [Discord Community](https://discord.gg/laravolt)
-- [Contributing Guidelines](/v6/how-to-contribute)
+- [Issues and pull requests](https://github.com/laravolt/laravolt/issues)

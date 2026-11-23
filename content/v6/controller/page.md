@@ -351,5 +351,4 @@ public function show(Post $post)
 
 - [Form Requests](/v6/form)
 - [Routes and Naming](/v6/routes)
-- [Service Pattern](/v6/best-practices)
-- [Action Classes](/v6/action-classes)
+- [Code Quality](/v6/code-quality)
