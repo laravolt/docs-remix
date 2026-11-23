@@ -3,6 +3,7 @@ import { createController } from 'remix/router'
 import { assetServer } from '../assets.ts'
 import { buildLlmsFullTxt, buildLlmsTxt, pathForMarkdownMirror } from '../lib/llms.ts'
 import { contentFileForPath, rawPageSource, renderPageFile } from '../lib/markdoc.ts'
+import { movedPages } from '../lib/redirects.ts'
 import { routes } from '../routes.ts'
 import { DocsLayout } from '../ui/docs-layout.tsx'
 import { Document } from '../ui/document.tsx'
@@ -53,6 +54,13 @@ export default createController(routes, {
       // (including .md mirrors) so external links keep working.
       if (pathname === '/v7' || pathname.startsWith('/v7/')) {
         let target = pathname.slice('/v7'.length) || '/'
+        return new Response(null, { status: 301, headers: { Location: target } })
+      }
+
+      // Pages merged into another page keep their old URL as a 301.
+      let moved = movedPages[pathname] ?? movedPages[pathname.replace(/\.md$/, '')]
+      if (moved) {
+        let target = pathname.endsWith('.md') ? `${moved}.md` : moved
         return new Response(null, { status: 301, headers: { Location: target } })
       }
 

@@ -83,6 +83,51 @@ pnpm run build
 
 Use the same manager consistently across development and CI. The current skeleton uses Tailwind v4 syntax in `resources/css/app.css`; align the package manager with your application starter kit.
 
+## Local development with Docker
+
+[Laravel Herd](https://herd.laravel.com/) on macOS and Windows needs no extra setup: add the project directory to Herd and open `http://example-app.test/auth/login`.
+
+For a container setup with Redis and mail testing, use [`laravoltdev/image:php8.5-dev`](https://github.com/laravolt/image): PHP 8.5 with Laravolt's extensions, FrankenPHP, Bun and Xdebug (off by default). The image is pulled, not built, and runs natively on Apple Silicon. Create `docker-compose.yml` in the project root:
+
+```yaml
+services:
+  php:
+    image: laravoltdev/image:php8.5-dev
+    restart: always
+    ports:
+      - 8080:8080 # app
+      - 5173:5173 # Vite: run `bun run dev` inside the container
+    volumes:
+      - .:/var/www/html
+
+  redis:
+    image: valkey/valkey:9.0-alpine
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - ./storage/redis-data:/data
+
+  mailserver:
+    image: axllent/mailpit
+    restart: always
+    ports:
+      - 8025:8025
+```
+
+Start it and install the dependencies inside the container:
+
+```bash
+docker compose up -d
+docker compose exec php composer install
+docker compose exec php bun install
+docker compose exec php bun run dev
+```
+
+The app answers on http://localhost:8080 and Mailpit on http://localhost:8025.
+
+For production, build on `laravoltdev/image:php8.5-prod-v2.1.0` and pin the versioned tag. The [starter kit](https://github.com/laravolt/laravel-starter-kit/blob/main/docker/frankenphp/prod.Dockerfile) includes a production Dockerfile.
+
 ## Project structure
 
 A Laravolt project keeps the business application understandable by following Laravel conventions. A typical layout:
