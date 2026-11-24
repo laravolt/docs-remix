@@ -11,6 +11,9 @@ nextjs:
 
 Released 24 November 2026. [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.4.0).
 
+- **8.4.1 is a security release for apps that use Workflow. Upgrade now.** [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.4.1).
+  - The public tracker opens only instances of its own module's process.
+  - BPMN definition XML (`workflow::definitions.xml`) requires sign-in. Guests get the tracker diagram from `workflow::tracker.diagram`.
 - **Workbench theme.** Graphite surfaces and the brand indigo, in light and dark mode. Turn it on with `LARAVOLT_UI_THEME=workbench` or **Settings > Tema**. Without that setting the look does not change: visual CI measured 0.00% difference on every classic page. See [Themes](/ui-foundation/themes).
 - **Preline 5 theme tokens** (`--layer`, `--foreground`, `--primary`, ...) ship in `main.min.css`. Any other theme name renders `data-theme="theme-{name}"` for your own Preline 5 theme.
 - CI also runs the test suite on PHP 8.6.
