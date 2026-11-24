@@ -1,14 +1,31 @@
 ---
 title: What's New
-description: Laravolt 8.0 to 8.3 — supported versions, Preline 5, Octane-safe menus, FilePond uploads, tighter access checks — and the Laravolt 7 overhaul
+description: Laravolt 8.0 to 8.4 — supported versions, Preline 5 and the Workbench theme, Octane-safe menus, FilePond uploads, tighter access checks — and the Laravolt 7 overhaul
 nextjs:
   metadata:
     title: What's New in Laravolt 8
     description: Laravolt 8 requires PHP 8.3+ and Laravel 12.68+/13.29+, ships Preline 5 and Tailwind 4.3 in 8.1, and makes the sidebar safe for Octane and persistent caches.
 ---
 
+## Laravolt 8.4
+
+Released 24 November 2026. [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.4.0).
+
+- **Workbench theme.** Graphite surfaces and the brand indigo, in light and dark mode. Turn it on with `LARAVOLT_UI_THEME=workbench` or **Settings > Tema**. Without that setting the look does not change: visual CI measured 0.00% difference on every classic page. See [Themes](/ui-foundation/themes).
+- **Preline 5 theme tokens** (`--layer`, `--foreground`, `--primary`, ...) ship in `main.min.css`. Any other theme name renders `data-theme="theme-{name}"` for your own Preline 5 theme.
+- CI also runs the test suite on PHP 8.6.
+
+Upgrade with `composer require laravolt/laravolt:^8.4`. In a `local` environment that already has `public/laravolt`, run `php artisan laravolt:extract-assets` once to get the new CSS.
+
 ## Laravolt 8.3
 
+- **8.3.5 closes access gaps. Upgrade, and urgently if `database-monitor` is enabled.** [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.3.5).
+  - Database backup routes require `laravolt::manage-database`. Before, the permission only hid the menu entry.
+  - File-manager download and delete links work only for the user who was shown them.
+  - Chunked uploads are kept per uploader. `chunked-upload.max_file_size` (default 100 MB) is enforced, and `validation.max_pending_uploads` (default 20) limits unfinished uploads per uploader.
+  - SVG brand logos are sanitized before they are inlined.
+  - `platform/dump` answers only when `APP_DEBUG` is on.
+- **Upgrading to 8.3.5:** grant `laravolt::manage-database` to the roles that manage backups, and raise `max_file_size` in `config/chunked-upload.php` if you upload larger files in chunks.
 - **8.3.3 tightens access checks. Upgrade, and read the steps below.** [Release notes](https://github.com/laravolt/laravolt/releases/tag/v8.3.3).
   - The Settings pages require the `laravolt::manage-settings` permission, as the menu entry already did. Users holding `*` keep access.
   - Workflow instance pages and `media::stream` require sign-in. The embedded form, the public tracker and the definition XML stay public.

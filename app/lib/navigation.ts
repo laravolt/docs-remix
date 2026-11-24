@@ -47,6 +47,7 @@ export const v7Navigation: NavSection[] = [
     links: [
       { title: 'Overview', href: '/ui-foundation/overview' },
       { title: 'Tables and listings', href: '/ui-foundation/tables' },
+      { title: 'Themes', href: '/ui-foundation/themes' },
     ],
   },
   {
