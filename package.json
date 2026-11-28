@@ -16,7 +16,7 @@
     "node": ">=22.14.0"
   },
   "dependencies": {
-    "@markdoc/markdoc": "^0.5.11",
+    "@markdoc/markdoc": "^0.5.13",
     "js-yaml": "^5.5.0",
     "prismjs": "1.30.0",
     "remix": "^3.2.0"
@@ -28,7 +28,7 @@
     "@types/prismjs": "1.26.6",
     "tailwindcss": "4.3.5",
     "typescript": "latest",
-    "wrangler": "4.158.0"
+    "wrangler": "4.162.0"
   },
   "overrides": {
     "undici": "7.30.1"
